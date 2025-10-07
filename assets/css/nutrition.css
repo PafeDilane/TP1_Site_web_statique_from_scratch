@@ -184,6 +184,55 @@
             border-color: #ff6b35;
         }
 
+
+
+                /* Code CSS existant pour le conteneur d'image */
+        .product-image {
+            width: 100%;
+            height: 280px; /* La hauteur fixe du cadre */
+            background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+            /*
+            Les propriétés 'display: flex', 'align-items: center', et 'justify-content: center'
+            que vous aviez sont PARFAITES pour centrer l'image enfant.
+            */
+            display: flex;
+            align-items: center; /* Centrage vertical */
+            justify-content: center; /* Centrage horizontal */
+            font-size: 18px;
+            color: #888;
+            font-weight: 600;
+            position: relative;
+            overflow: hidden; /* C'est essentiel pour s'assurer que l'image ne dépasse pas le cadre */
+        }
+
+        /* NOUVELLE RÈGLE CSS pour l'image elle-même */
+        .product-image .product-img {
+            /* 1. Assurez-vous que l'image remplisse 100% de la largeur et de la hauteur de son parent (.product-image) */
+            width: 100%;
+            height: 100%;
+
+            /* 2. PROPRIÉTÉ CLÉ : Adapte l'image pour qu'elle couvre toute la zone,
+            tout en préservant ses proportions. Les parties qui débordent seront coupées.
+            Cela permet un ajustement parfait au cadre sans déformation. */
+            object-fit: cover;
+            
+            /* 3. Optionnel, mais recommandé pour garantir l'absence de marges inattendues */
+            display: block;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
         .product-image {
             width: 100%;
             height: 280px;
@@ -203,7 +252,7 @@
             font-size: 64px;
             opacity: 0.3;
             position: absolute;
-        }
+        } */
 
         .product-badge {
             position: absolute;
