@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUTRITION - Articles pour Bébé</title>
+    <link rel="stylesheet" href="assets/css/nutrition.css"> 
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">🍼 Layette Store</div>
+            <nav>
+                <ul>
+                    <form class="search-bar">
+                        <input type="text" placeholder="Rechercher un article...">
+                        <button type="submit">🔍</button>
+                    </form>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="produits.html">Produits</a></li>
+                    <li><a href="nutrition.html" class="active">Nutrition</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="apropos.html">À Propos</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+    <!-- Banner -->
+    <section class="banner">
+        <h1>Nutrition pour Bébé</h1>
+        <p>Découvrez notre collection complète d'articles de nutrition pour votre bébé. Qualité garantie, prix compétitifs.</p>
+    </section>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Stats Section -->
+        <div class="stats-section">
+            <div class="stat-card">
+                <div class="stat-number">16+</div>
+                <div class="stat-label">Articles disponibles</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Qualité garantie</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Service client</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">⭐ 4.8</div>
+                <div class="stat-label">Satisfaction client</div>
+            </div>
+        </div>
+
+        <!-- Filter Section -->
+        <div class="filter-section">
+            <h3>Filtrer les produits</h3>
+            <div class="filter-options">
+                <div class="filter-group">
+                    <label for="category">Catégorie</label>
+                    <select id="category">
+                        <option value="">Toutes les catégories</option>
+                        <option value="biberons">Biberons & Tétines</option>
+                        <option value="tirelait">Tire-lait</option>
+                        <option value="accessoires">Accessoires</option>
+                        <option value="vaisselle">Vaisselle bébé</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="price-range">Prix maximum (FCFA)</label>
+                    <select id="price-range">
+                        <option value="">Tous les prix</option>
+                        <option value="10000">Moins de 10 000</option>
+                        <option value="30000">Moins de 30 000</option>
+                        <option value="60000">Moins de 60 000</option>
+                        <option value="120000">Moins de 120 000</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="sort">Trier par</label>
+                    <select id="sort">
+                        <option value="featured">Populaires</option>
+                        <option value="price-asc">Prix croissant</option>
+                        <option value="price-desc">Prix décroissant</option>
+                        <option value="name">Nom A-Z</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span>Image du produit</span>
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Biberons</div>
+                    <h3 class="product-name">Biberon Anti-Colique 150ml</h3>
+                    <div class="product-features">
+                        <h4>Caractéristiques :</h4>
+                        <ul>
+                            <li>Système anti-colique avancé</li>
+                            <li>Sans BPA, silicone médical</li>
+                            <li>Valve anti-air intégrée</li>
+                            <li>Compatible lave-vaisselle</li>
+                            <li>Idéal 0-6 mois</li>
+                        </ul>
+                    </div>
+
+                    <div class="product-footer">
+                        <div>
+                            <div class="product-price">6 500 FCFA</div>
+                            <div class="price-range">5 000 - 8 000 FCFA</div>
+                        </div>
+                        <button class="btn-add-cart">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span>Image du produit</span>
+                    <div class="product-badge">Top vente</div>
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Biberons</div>
+                    <h3 class="product-name">Biberon Col Large 250ml</h3>
+                    <div class="product-features">
+                        <h4>Caractéristiques :</h4>
+                        <ul>
+                            <li>Col large pour remplissage facile</li>
+                            <li>Tétine naturelle souple</li>
+                            <li>Graduation précise</li>
+                            <li>Matériau premium sans toxines</li>
+                            <li>Facile à nettoyer</li>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <div>
+                            <div class="product-price">9 500 FCFA</div>
+                            <div class="price-range">7 000 - 12 000 FCFA</div>
+                        </div>
+                        <button class="btn-add-cart">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span>Image du produit</span>
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Accessoires</div>
+                    <h3 class="product-name">Tétine Silicone 0-6 Mois</h3>
+                    <div class="product-features">
+                        <h4>Caractéristiques :</h4>
+                        <ul>
+                            <li>Silicone ultra-doux</li>
+                            <li>Forme anatomique</li>
+                            <li>Débit variable adaptatif</li>
+                            <li>Compatible plusieurs marques</li>
+                            <li>Pack de 2 tétines</li>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <div>
+                            <div class="product-price">3 750 FCFA</div>
+                            <div class="price-range">2 500 - 5 000 FCFA</div>
+                        </div>
+                        <button class="btn-add-cart">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span>Image du produit</span>
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Tire-lait</div>
+                    <h3 class="product-name">Tire-Lait Manuel</h3>
+                    <div class="product-features">
+                        <h4>Caractéristiques :</h4>
+                        <ul>
+                            <li>Ergonomique et silencieux</li>
+                            <li>Poignée confortable</li>
+                            <li>Coussin massant doux</li>
+                            <li>Facile à assembler</li>
+                            <li>Portable et discret</li>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <div>
+                            <div class="product-price">27 500 FCFA</div>
+                            <div class="price-range">20 000 - 35 000 FCFA</div>
+                        </div>
+                        <button class="btn-add-cart">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span>Image du produit</span>
+                    <div class="product-badge">Premium</div>
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Tire-lait</div>
+                    <h3 class="product-name">Tire-Lait Électrique</h3>
+                    <div class="product-features">
+                        <h4>Caractéristiques :</h4>
+                        <ul>
+                            <li>Double pompage efficace</li>
+                            <li>10 niveaux d'aspiration</li>
+                            <li>Écran LCD digital</li>
+                            <li>Batterie rechargeable</li>
+                            <li>Fonction mémoire intelligent</li>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <div>
+                            <div class="product-price">90 000 FCFA</div>
+                            <div class="price-range">60 000 - 120 000 FCFA</div>
+                        </div>
+                        <button class="btn-add-cart">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span>Image du produit</span>
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Accessoires</div>
+                    <h3 class="product-name">Chauffe-Biberon USB</h3>
+                    <div class="product-features">
+                        <h4>Caractéristiques :</h4>
+                        <ul>
+                            <li>Chauffage rapide 3-5 min</li>
+                            <li>USB ou adaptateur secteur</li>
+                            <li>Température contrôlée</li>
+                            <li>Portable pour voyage</li>
+                            <li>Compatible tous biberons</li>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <div>
+                            <div class="product-price">22 500 FCFA</div>
+                            <div class="price-range">15 000 - 30 000 FCFA</div>
+                        </div>
+                        <button class="btn-add-cart">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span>Image du produit</span>
+                    <div class="product-badge">Premium</div>
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Accessoires</div>
+                    <h3 class="product-name">Stérilisateur UV pour Biberon</h3>
+                    <div class="product-features">
+                        <h4>Caractéristiques :</h4>
+                        <ul>
+                            <li>Stérilisation UV avancée</li>
+                            <li>Élimine 99.9% des germes</li>
+                            <li>Grande capacité 6 biberons</li>
+                            <li>Cycle rapide 8 minutes</li>
+                            <li>Séchage automatique intégré</li>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <div>
+                            <div class="product-price">60 000 FCFA</div>
+                            <div class="price-range">40 000 - 80 000 FCFA</div>
+                        </div>
+                        <button class="btn-add-cart">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span>Image du produit</span>
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Accessoires</div>
+                    <h3 class="product-name">Sac Transport pour Biberons</h3>
+                    <div class="product-features">
+                        <h4>Caractéristiques :</h4>
+                        <ul>
+                            <li>Isolation thermique efficace</li>
+                            <li>Compartiments multiples</li>
+                            <li>Matériau imperméable</li>
+                            <li>Poignée et bandoulière</li>
+                            <li>Design élégant et pratique</li>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <div>
+                            <div class="product-price">15 000 FCFA</div>
+                            <div class="price-range">10 000 - 20 000 FCFA</div>
+                        </div>
+                        <button class="btn-add-cart">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 9 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span>Image du produit</span>
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Vaisselle</div>
+                    <h3 class="product-name">Gobelet d'Apprentissage à Bec</h3>
+                    <div class="product-features">
+                        <h4>Caractéristiques :</h4>
+                        <ul>
+                            <li>Anti-fuite 100% étanche</li>
+                            <li>Poignées ergonomiques</li>
+                            <li>Bec souple sans BPA</li>
+                            <li>Graduation visible</li>
+                            <li>Facile à tenir pour bébé</li>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <div>
+                            <div class="product-price">7 500 FCFA</div>
+                            <div class="price-range">5 000 - 10 000 FCFA</div>
+                        </div>
+                        <button class="btn-add-cart">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 10 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span>Image du produit</span>
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Vaisselle</div>
+                    <h3 class="product-name">Assiette Compartimentée Bébé</h3>
+                    <div class="product-features">
+                        <h4>Caractéristiques :</h4>
+                        <ul>
+                            <li>3 compartiments séparés</li>
+                            <li>Ventouse anti-renversement</li>
+                            <li>Micro-ondes compatible</li>
+                            <li>Matériau alimentaire sûr</li>
+                            <li>Couleurs attractives</li>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <div>
+                            <div class="product-price">11 000 FCFA</div>
+                            <div class="price-range">7 000 - 15 000 FCFA</div>
+                        </div>
+                        <button class="btn-add-cart">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 11 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span>Image du produit</span>
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Accessoires</div>
+                    <h3 class="product-name">Pots de Conservation Bouillie</h3>
+                    <div class="product-features">
+                        <h4>Caractéristiques :</h4>
+                        <ul>
+                            <li>Set de 6 pots hermétiques</li>
+                            <li>Empilables pour gain d'espace</li>
+                            <li>Congélateur et micro-ondes</li>
+                            <li>Graduation claire</li>
+                            <li>Sans BPA certifié</li>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <div>
+                            <div class="product-price">5 000 FCFA</div>
+                            <div class="price-range">3 000 - 8 000 FCFA</div>
+                        </div>
+                        <button class="btn-add-cart">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+            <!-- Product 12 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span>Image du produit</span>
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Vaisselle</div>
+                    <h3 class="product-name">Cuillère Souple pour Bébé</h3>
+                    <div class="product-features">
+                        <h4>Caractéristiques :</h4>
+                        <ul>
+                            <li>Set de 4 cuillères souples</li>
+                            <li>Protège les gencives sensibles</li>
+                            <li>Embout indicateur température</li>
+                            <li>Manche antidérapant</li>
+                            <li>Couleurs variées attrayantes</li>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <div>
+                            <div class="product-price">2 500 FCFA</div>
+                            <div class="price-range">1 500 - 3 500 FCFA</div>
+                        </div>
+                        <button class="btn-add-cart">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 13 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span>Image du produit</span>
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Accessoires</div>
+                    <h3 class="product-name">Doseur de Lait en Poudre</h3>
+                    <div class="product-features">
+                        <h4>Caractéristiques :</h4>
+                        <ul>
+                            <li>4 compartiments séparés</li>
+                            <li>Dosage précis et pratique</li>
+                            <li>Couvercle hermétique étanche</li>
+                            <li>Compact pour sac à langer</li>
+                            <li>Plastique alimentaire durable</li>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <div>
+                            <div class="product-price">5 500 FCFA</div>
+                            <div class="price-range">4 000 - 7 000 FCFA</div>
+                        </div>
+                        <button class="btn-add-cart">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 14 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span>Image du produit</span>
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Accessoires</div>
+                    <h3 class="product-name">Goupillon pour Biberon</h3>
+                    <div class="product-features">
+                        <h4>Caractéristiques :</h4>
+                        <ul>
+                            <li>Set complet 3 brosses</li>
+                            <li>Poils doux non-abrasifs</li>
+                            <li>Manche flexible rotatif</li>
+                            <li>Brosse tétine incluse</li>
+                            <li>Support ventouse pratique</li>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <div>
+                            <div class="product-price">3 250 FCFA</div>
+                            <div class="price-range">2 000 - 4 500 FCFA</div>
+                        </div>
+                        <button class="btn-add-cart">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 15 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span>Image du produit</span>
+                    <div class="product-badge">Nouveau</div>
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Accessoires</div>
+                    <h3 class="product-name">Bavoir en Silicone</h3>
+                    <div class="product-features">
+                        <h4>Caractéristiques :</h4>
+                        <ul>
+                            <li>Silicone souple lavable</li>
+                            <li>Poche récupérateur de miettes</li>
+                            <li>Ajustable multi-tailles</li>
+                            <li>Imperméable et facile</li>
+                            <li>Design ludique coloré</li>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <div>
+                            <div class="product-price">8 500 FCFA</div>
+                            <div class="price-range">5 000 - 12 000 FCFA</div>
+                        </div>
+                        <button class="btn-add-cart">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 16 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span>Image du produit</span>
+                    <div class="product-badge">Top vente</div>
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Accessoires</div>
+                    <h3 class="product-name">Sacs Congélation Lait Maternel</h3>
+                    <div class="product-features">
+                        <h4>Caractéristiques :</h4>
+                        <ul>
+                            <li>Pack de 50 sacs pré-stérilisés</li>
+                            <li>Double fermeture sécurisée</li>
+                            <li>Zone d'étiquetage datée</li>
+                            <li>Compatible tire-lait direct</li>
+                            <li>Graduation précise 200ml</li>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <div>
+                            <div class="product-price">11 500 FCFA</div>
+                            <div class="price-range">8 000 - 15 000 FCFA</div>
+                        </div>
+                        <button class="btn-add-cart">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action Section -->
+        <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); padding: 50px; border-radius: 15px; text-align: center; color: #ffffff; margin-bottom: 40px; box-shadow: 0 8px 25px rgba(0,0,0,0.2);">
+            <h2 style="font-size: 36px; margin-bottom: 20px; color: #ff6b35;">Besoin d'aide pour choisir ?</h2>
+            <p style="font-size: 18px; margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.8;">
+                Notre équipe d'experts est disponible pour vous conseiller sur les meilleurs produits adaptés à l'âge et aux besoins de votre bébé.
+            </p>
+            <button style="background: linear-gradient(135deg, #ff6b35 0%, #ff8c5f 100%); color: #ffffff; border: none; padding: 18px 45px; font-size: 18px; font-weight: 600; border-radius: 8px; cursor: pointer; text-transform: uppercase; letter-spacing: 2px; box-shadow: 0 6px 20px rgba(255,107,53,0.4); transition: all 0.3s ease;">
+                Contactez-nous
+            </button>
+        </div>
+
+        <!-- Advantages Section -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-bottom: 50px;">
+            <div style="background-color: #f9f9f9; padding: 30px; border-radius: 12px; text-align: center; border: 2px solid #e8e8e8; transition: all 0.3s ease;">
+                <div style="font-size: 48px; margin-bottom: 15px;">🚚</div>
+                <h3 style="color: #1a1a1a; margin-bottom: 12px; font-size: 20px;">Livraison Rapide</h3>
+                <p style="color: #666; font-size: 15px; line-height: 1.6;">Recevez vos commandes sous 24-48h partout au Cameroun</p>
+            </div>
+            <div style="background-color: #f9f9f9; padding: 30px; border-radius: 12px; text-align: center; border: 2px solid #e8e8e8; transition: all 0.3s ease;">
+                <div style="font-size: 48px; margin-bottom: 15px;">✅</div>
+                <h3 style="color: #1a1a1a; margin-bottom: 12px; font-size: 20px;">Produits Certifiés</h3>
+                <p style="color: #666; font-size: 15px; line-height: 1.6;">Articles conformes aux normes internationales de sécurité</p>
+            </div>
+            <div style="background-color: #f9f9f9; padding: 30px; border-radius: 12px; text-align: center; border: 2px solid #e8e8e8; transition: all 0.3s ease;">
+                <div style="font-size: 48px; margin-bottom: 15px;">💰</div>
+                <h3 style="color: #1a1a1a; margin-bottom: 12px; font-size: 20px;">Paiement Sécurisé</h3>
+                <p style="color: #666; font-size: 15px; line-height: 1.6;">Mobile Money, carte bancaire et paiement à la livraison</p>
+            </div>
+            <div style="background-color: #f9f9f9; padding: 30px; border-radius: 12px; text-align: center; border: 2px solid #e8e8e8; transition: all 0.3s ease;">
+                <div style="font-size: 48px; margin-bottom: 15px;">🔄</div>
+                <h3 style="color: #1a1a1a; margin-bottom: 12px; font-size: 20px;">Retour Facile</h3>
+                <p style="color: #666; font-size: 15px; line-height: 1.6;">Garantie satisfait ou remboursé sous 14 jours</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>À Propos</h3>
+                <ul>
+                    <li><a href="#">Notre Histoire</a></li>
+                    <li><a href="#">Nos Valeurs</a></li>
+                    <li><a href="#">L'Équipe</a></li>
+                    <li><a href="#">Carrières</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Service Client</h3>
+                <ul>
+                    <li><a href="#">Aide & FAQ</a></li>
+                    <li><a href="#">Livraison</a></li>
+                    <li><a href="#">Retours</a></li>
+                    <li><a href="#">Garantie</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Catégories</h3>
+                <ul>
+                    <li><a href="#">Nutrition</a></li>
+                    <li><a href="#">Vêtements</a></li>
+                    <li><a href="#">Hygiène</a></li>
+                    <li><a href="#">Jouets</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                    <li>📧 contact@layettestore.cm</li>
+                    <li>📱 +237 654 794 187</li>
+                    <li>📍 Yaounde, Cameroun</li>
+                    <li>🕒 Lun-Sam: 8h-18h</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Layette Store - Tous droits réservés | Projet TP Génie Informatique</p>
+        </div>
+    </footer>
+</body>
+
+
+
+</head>
