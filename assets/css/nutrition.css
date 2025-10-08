@@ -220,18 +220,6 @@
             display: block;
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
 /*
         .product-image {
             width: 100%;
@@ -518,4 +506,131 @@
 
         .search-bar button:hover {
                 background: #ff6b35;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /* =================================================== */
+        /* Styles pour la Page de Détail Produit (detail_produit.html) */
+        /* =================================================== */
+
+        /* Layout principal de la page de détail : Image vs Info */
+        .product-detail-layout {
+            display: flex;
+            gap: 40px;
+            padding: 40px 0;
+        }
+
+        .detail-image-area {
+            /* Image prend 45% de la largeur */
+            flex: 0 0 45%; 
+            max-width: 45%; 
+        }
+
+        .detail-info-area {
+            /* Infos prennent 55% de la largeur */
+            flex: 0 0 55%; 
+            max-width: 55%;
+        }
+
+        /* Redéfinir la taille de l'image pour la page de détail (plus grande) */
+        .detail-image-area .product-image {
+            height: 480px; /* Grande hauteur pour l'image détaillée */
+            border-radius: 12px;
+            border: 2px solid #e8e8e8;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Barre d'action (quantité, ajouter, commander) */
+        .detail-action-bar {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #f0f0f0;
+        }
+
+        /* Champ de quantité */
+        .detail-action-bar input[type="number"] {
+            padding: 10px;
+            width: 80px;
+            text-align: center;
+            border: 2px solid #d0d0d0;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .detail-action-bar input[type="number"]:focus {
+            border-color: #ff6b35;
+            outline: none;
+        }
+
+        /* Bouton "Commander Directement" (style plus sombre ou différent) */
+        .btn-buy-now {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #ffffff;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            flex: 1;
+        }
+
+        .btn-buy-now:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Adaptation pour la page de détail sur mobile */
+        @media (max-width: 992px) {
+            .product-detail-layout {
+                flex-direction: column; /* Les blocs s'empilent verticalement */
+            }
+            
+            .detail-image-area,
+            .detail-info-area {
+                max-width: 100%;
+                flex: 1 1 100%;
+            }
+            
+            .detail-image-area .product-image {
+                height: 350px; /* Réduire la hauteur sur mobile */
+                margin-bottom: 20px;
+            }
+
+            .detail-action-bar {
+                flex-wrap: wrap;
+            }
+
+            .detail-action-bar input[type="number"] {
+                width: 100%; /* Prend toute la largeur pour la quantité */
+                margin-bottom: 10px;
+            }
+            
+            .btn-add-cart,
+            .btn-buy-now {
+                flex: 1 1 48%; /* Répartir les deux boutons sur deux colonnes si nécessaire */
+            }
         }
