@@ -9,7 +9,11 @@
             background-color: #f5f5f5;
         }
 
-        /* --- Top Navbar --- */
+        html {
+    scroll-behavior: smooth;
+}
+
+/* --- Top Navbar --- */
         .top-nav {
             display: flex;
             justify-content: space-between;
@@ -367,7 +371,7 @@
             cursor: pointer;
             font-weight: bold;
             width: 100%;
-            transition: background-color 0.2s;
+            transition: all 0.3s ease, background-color 0.3s ease;
             transform: translateY(0);
             transition: all 0.3s ease;
         }
@@ -681,6 +685,7 @@
 .btn-primary {
     background: white;
     color: #1096EA;
+    transition: all 0.3s ease, background-color 0.3s ease;
 }
 
 .btn-secondary {
@@ -692,6 +697,7 @@
 .btn-primary:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    background-color: #f0f0f0;
 }
 
 .btn-secondary:hover {
