@@ -549,7 +549,7 @@
 
         /* Redéfinir la taille de l'image pour la page de détail (plus grande) */
         .detail-image-area .product-image {
-            height: 480px; /* Grande hauteur pour l'image détaillée */
+            height: 595px; /* Grande hauteur pour l'image détaillée */
             border-radius: 12px;
             border: 2px solid #e8e8e8;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
