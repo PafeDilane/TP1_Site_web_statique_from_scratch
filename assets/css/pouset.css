@@ -167,6 +167,11 @@ header {
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
+  /*  Ombre subtile par défaut */
+   box-shadow: 0 8px 16px rgba(34, 104, 255, 0.35);
+   /*  Prépare la transition pour l'effet de survol */
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+ 
   
 }
 
