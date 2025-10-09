@@ -7,6 +7,7 @@
 
         body {
             background-color: #f5f5f5;
+            padding-top: 110px; /* Hauteur combinée des deux nav bars */
         }
 
         html {
@@ -21,6 +22,13 @@
             padding: 10px 30px;
             background-color: #fff;
             border-bottom: 1px solid #ddd;
+            position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
         .logo {
@@ -86,6 +94,13 @@
             color: #fff;
             padding: 10px 30px;
             font-size: 14px;
+            position: fixed;
+    top: 60px; /* Hauteur de la top-nav */
+    left: 0;
+    right: 0;
+    background-color: #222;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         .bottom-nav .menu-dropdown {
             display: flex;
@@ -681,6 +696,18 @@
     .advantage {
         width: calc(50% - 15px);
         min-width: 150px;
+    }
+
+    .bottom-nav {
+        top: 120px; /* Ajuster selon la hauteur de la top-nav en mobile */
+    }
+
+    body {
+        padding-top: 170px; /* Ajuster selon la hauteur combinée en mobile */
+    }
+
+    .menu-dropdown {
+        background-color: #222;
     }
 }
 
