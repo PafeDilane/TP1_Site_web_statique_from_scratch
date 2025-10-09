@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style_index.css">
+    <title>Bébéconfort</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="top-nav">
+        <a href="index.html" class="logo">BÉBÉCONFORT</a>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Rechercher un produit..." aria-label="Rechercher">
+            <button aria-label="Lancer la recherche"><i class="fa fa-search"></i></button>
+        </div>
+
+        <div class="account-cart">
+            <a href="connexion.html"><i class="fa fa-user"></i> Mon Compte</a>
+            <a href="panier.html"><i class="fa fa-shopping-cart"></i> Panier</a>
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <span class="menu-icon" aria-label="Menu" role="button" tabindex="0">
+            <i class="fa fa-bars"></i>
+        </span>
+        <div class="menu-dropdown">
+            <a href="#">Accueil</a>
+            <div class="category-dropdown">
+                <a href="#" class="dropdown-trigger">Catégories <i class="fa fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="#">Vêtements</a>
+                    <a href="#">Alimentation</a>
+                    <a href="#">Couches et Lingettes</a>
+                    <a href="#">Chaussures</a>
+                    <a href="#">Textile de Maternité</a>
+                    <a href="#">Poussettes</a>
+                </div>
+            </div>
+            <a href="#">À propos</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+<section class="hero">
+    <div class="hero-slider">
+        <!-- Slide 1 -->
+        <div class="hero-content active">
+            <div class="hero-container">
+                <!-- Partie gauche -->
+                <div class="hero-left">
+                    <div class="hero-image">
+                        <img src="../images/bebe.png" alt="Bébé">
+                    </div>
+                </div>
+                <!-- Partie droite -->
+                <div class="hero-right">
+                    <div class="hero-text">
+                        <h2><strong>Habillez ses premiers instants</strong></h2>
+                        <h3><strong>Layette Garçon</strong></h3>
+                        <h3><strong>Layette Fille</strong></h3>
+                        <div class="hero-buttons">
+                            <a href="#flash-sales" class="btn-primary">Découvrir</a>
+                            <a href="#" class="btn-secondary">En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="hero-content">
+            <div class="hero-container">
+                <div class="hero-left">
+                    <div class="hero-image">
+                        <img src="images/promotions.png" alt="Promotion">
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <div class="hero-text">
+                        <h2><strong>Promotions d'Automne</strong></h2>
+                        <h3><strong>Jusqu'à -50%</strong></h3>
+                        <h3><strong>Sur les collections</strong></h3>
+                        <div class="hero-buttons">
+                            <a href="#" class="btn-primary">Voir les offres</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="hero-content">
+            <div class="hero-container">
+                <div class="hero-left">
+                    <div class="hero-image">
+                        <img src="images/Gemini_Generated_Image_kykf5dkykf5dkykf.png" alt="Nouveautés">
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <div class="hero-text">
+                        <h2><strong>Nouvelles Collections</strong></h2>
+                        <h3><strong>Automne-Hiver 2025</strong></h3>
+                        <h3><strong>Découvrez les tendances</strong></h3>
+                        <div class="hero-buttons">
+                            <a href="#" class="btn-primary">Explorer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        
+    </div>
+
+    <div class="slider-dots">
+        <span class="dot active" data-slide="0"></span>
+        <span class="dot" data-slide="1"></span>
+        <span class="dot" data-slide="2"></span>
+    </div>
+</section>
+
+<section class="advantages">
+    <div class="advantages-content">
+        <div class="advantage">
+            <i class="fa fa-shield-halved"></i>
+            <p>Paiements sûrs</p>
+        </div>
+        <div class="advantage">
+            <i class="fa fa-truck"></i>
+            <p>Livraison rapide</p>
+        </div>
+        <div class="advantage">
+            <i class="fa fa-tags"></i>
+            <p>Meilleur prix garanti</p>
+        </div>
+        <div class="advantage">
+            <i class="fa fa-certificate"></i>
+            <p>100% Authentique</p>
+        </div>
+        <div class="advantage">
+            <i class="fa fa-rotate-left"></i>
+            <p>Retours faciles</p>
+        </div>
+    </div>
+</section>
+
+<section class="flash-sales" id="flash-sales">
+    <div class="flash-sales-header">
+        <h2>flash sales products</h2>
+        <div class="countdown">
+            <span>Se termine dans</span>
+            <div class="time-box" id="hours">06</div> h
+            <div class="time-box" id="minutes">21</div> m
+            <div class="time-box" id="seconds">56</div> s
+        </div>
+        <a href="#" class="show-more">Voir plus &raquo;</a>
+    </div>
+
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="https://placehold.co/250x250/e5f1fb/333?text=Produit+1" alt="Product 1">
+            <h3>Ensemble Naissance</h3>
+            <div class="price">29.99€</div>
+            <button>Ajouter au panier</button>
+        </div>
+        <div class="product-card">
+            <img src="https://placehold.co/250x250/e5f1fb/333?text=Produit+2" alt="Product 2">
+            <h3>Pyjama Doux</h3>
+            <div class="price">19.50€</div>
+            <button>Ajouter au panier</button>
+        </div>
+        <div class="product-card">
+            <img src="https://placehold.co/250x250/e5f1fb/333?text=Produit+3" alt="Product 3">
+            <h3>Body Coton Bio</h3>
+            <div class="price">12.00€</div>
+            <button>Ajouter au panier</button>
+        </div>
+        <div class="product-card">
+            <img src="https://placehold.co/250x250/e5f1fb/333?text=Produit+4" alt="Product 4">
+            <h3>Chaussons Cuir</h3>
+            <div class="price">24.90€</div>
+            <button>Ajouter au panier</button>
+        </div>
+        <div class="product-card">
+            <img src="https://placehold.co/250x250/e5f1fb/333?text=Produit+4" alt="Product 5">
+            <h3>Chaussettes</h3>
+            <div class="price">29.90€</div>
+            <button>Ajouter au panier</button>
+        </div>
+    </div>
+</section>
+
+<section class="just-for-you">
+    <div class="section-header">
+        <h2>Juste Pour vous</h2>
+        <a href="#" class="show-more">Voir plus &raquo;</a>
+    </div>
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="https://placehold.co/250x250/e5f1fb/333?text=Produit+5" alt="Product 5">
+            <h3>Gigoteuse Étoilée</h3>
+            <div class="price">34.99€</div>
+            <button>Ajouter au panier</button>
+        </div>
+        <div class="product-card">
+            <img src="https://placehold.co/250x250/e5f1fb/333?text=Produit+6" alt="Product 6">
+            <h3>Doudou Lapin</h3>
+            <div class="price">15.00€</div>
+            <button>Ajouter au panier</button>
+        </div>
+        <div class="product-card">
+            <img src="https://placehold.co/250x250/e5f1fb/333?text=Produit+7" alt="Product 7">
+            <h3>Tapis d'Éveil</h3>
+            <div class="price">45.50€</div>
+            <button>Ajouter au panier</button>
+        </div>
+        <div class="product-card">
+            <img src="https://placehold.co/250x250/e5f1fb/333?text=Produit+8" alt="Product 8">
+            <h3>Biberon en Verre</h3>
+            <div class="price">18.90€</div>
+            <button>Ajouter au panier</button>
+        </div>
+        <div class="product-card">
+            <img src="https://placehold.co/250x250/e5f1fb/333?text=Produit+9" alt="Product 9">
+            <h3>Lit Bébé</h3>
+            <div class="price">199.00€</div>
+            <button>Ajouter au panier</button>
+        </div>
+        
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-column">
+            <h4>Service Client</h4>
+            <ul>
+                <li><a href="#">Centre D'aide</a></li>
+                <li><a href="#">Votre compte</a></li>
+                <li><a href="#">Vos Commandes</a></li>
+                <li><a href="#">Comment Payer</a></li>
+                    <li><a href="#">Comment Acheter</a></li>
+                <li><a href="#">Contactez Nous</a></li>
+                <li><a href="#">Mentions Légales</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Liens Utiles</h4>
+            <ul>
+                <li><a href="#">Vêtements</a></li>
+                <li><a href="#">Alimentation</a></li>
+                <li><a href="#">Couches et Lingettes</a></li>
+                <li><a href="#">Chaussures</a></li>
+                <li><a href="#">Textile de Maternité</a></li>
+                <li><a href="#">Poussettes</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>A propos</h4>
+            <ul>
+                <li><a href="#">Qui Sommes Nous</a></li>
+                
+                <li><a href="#">Carrière</a></li>
+                <li><a href="#">Conditions Générales</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-column">
+            <h4>Methode De paiement</h4>
+            <div class="payment-methods">
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" alt="Visa" class="payment-logo"></a>
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" class="payment-logo"></a>
+                <a href="#"><img src="../images/téléchargement.png" alt="American Express" class="payment-logo"></a>
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" class="payment-logo"></a>
+                <a href="#"><img src="../images/mtn-mobile-money-logo.jpg" alt="Mtn Money" class="payment-logo"></a>
+                <a href="#"><img src="../images/orange-money-logo-png_seeklogo-440383.png" alt="orange money" class="payment-logo"></a>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h4>Réseaux Sociaux</h4>
+            <ul>
+                <li><a href="#"><img src="../images/facebook.jpg" alt="Facebook" class="social-logo"></a></li>
+                <li><a href="#"><img src="../images/instagram.jpg" alt="Instagram" class="social-logo"></a></li>
+                <li><a href="#"><img src="../images/twitter.png" alt="Twitter" class="social-logo"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; <strong>BébéConfort 2025 - Tous droits réservés</strong></p>
+    </div>
+</footer>
+
+<script>
+    // Simple countdown timer script
+    function startCountdown() {
+        const hoursElement = document.getElementById('hours');
+        const minutesElement = document.getElementById('minutes');
+        const secondsElement = document.getElementById('seconds');
+
+        if(!hoursElement || !minutesElement || !secondsElement) return;
+
+        let totalSeconds = (6 * 3600) + (21 * 60) + 56; // Initial time
+
+        const interval = setInterval(() => {
+            if (totalSeconds <= 0) {
+                clearInterval(interval);
+                document.querySelector('.countdown').innerHTML = "Vente terminée !";
+                return;
+            }
+
+            totalSeconds--;
+
+            let hours = Math.floor(totalSeconds / 3600);
+            let minutes = Math.floor((totalSeconds % 3600) / 60);
+            let seconds = totalSeconds % 60;
+
+            hoursElement.textContent = String(hours).padStart(2, '0');
+            minutesElement.textContent = String(minutes).padStart(2, '0');
+            secondsElement.textContent = String(seconds).padStart(2, '0');
+
+        }, 1000);
+    }
+
+    // Start the countdown when the page content is loaded
+    document.addEventListener('DOMContentLoaded', startCountdown);
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuIcon = document.querySelector('.menu-icon');
+        const bottomNav = document.querySelector('.bottom-nav');
+
+        menuIcon.addEventListener('click', () => {
+            bottomNav.classList.toggle('show-menu');
+        });
+
+        // Optionnel : hover également pour desktop
+        menuIcon.addEventListener('mouseenter', () => {
+            if(window.innerWidth > 768){
+                bottomNav.classList.add('show-menu');
+            }
+        });
+        menuIcon.addEventListener('mouseleave', () => {
+            if(window.innerWidth > 768){
+                bottomNav.classList.remove('show-menu');
+            }
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const slides = document.querySelectorAll('.hero-content');
+        const dots = document.querySelectorAll('.dot');
+        const prev = document.querySelector('.prev');
+        const next = document.querySelector('.next');
+        let currentSlide = 0;
+        
+        function showSlide(n) {
+            // Masquer tous les slides et désactiver tous les dots
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            // Calculer l'index du nouveau slide
+            currentSlide = (n + slides.length) % slides.length;
+            
+            // Afficher le nouveau slide et activer le dot correspondant
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+        
+        // Démarrer le carousel automatique
+        let slideInterval = setInterval(() => {
+            showSlide(currentSlide + 1);
+        }, 5000); // Change de slide toutes les 5 secondes
+        
+        // Navigation avec les flèches
+        if (prev && next) {
+            prev.addEventListener('click', () => {
+                clearInterval(slideInterval); // Arrêter la transition auto
+                showSlide(currentSlide - 1);
+                // Redémarrer la transition auto
+                slideInterval = setInterval(() => showSlide(currentSlide + 1), 5000);
+            });
+            
+            next.addEventListener('click', () => {
+                clearInterval(slideInterval); // Arrêter la transition auto
+                showSlide(currentSlide + 1);
+                // Redémarrer la transition auto
+                slideInterval = setInterval(() => showSlide(currentSlide + 1), 5000);
+            });
+        }
+        
+        // Navigation avec les dots
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                clearInterval(slideInterval); // Arrêter la transition auto
+                showSlide(index);
+                // Redémarrer la transition auto
+                slideInterval = setInterval(() => showSlide(currentSlide + 1), 5000);
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
