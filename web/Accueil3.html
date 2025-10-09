@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bébéconfort</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        /* --- Top Navbar --- */
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 30px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo {
+            color: #1096EA;
+            font-weight: bold;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            
+            /* flex: 1; */
+            width: 600px;
+            margin: 0 30px;
+        }
+
+        .search-bar input {
+            flex: 1;
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            border-radius: 20px 0 0 20px;
+            outline: none;
+        }
+
+        .search-bar button {
+            padding: 8px 12px;
+            border: none;
+            background-color: #1096EA;
+            color: white;
+            border-radius: 0 20px 20px 0;
+            cursor: pointer;
+        }
+
+        /* --- Account & Cart --- */
+        .account-cart {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        .account-cart a {
+            color: black;
+            text-decoration: none;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .account-cart a:hover {
+            color: #1096EA;
+        }
+
+        /* --- Bottom Nav --- */
+        .bottom-nav {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            background-color: #222;
+            color: #fff;
+            padding: 10px 30px;
+            font-size: 14px;
+        }
+        .bottom-nav .menu-dropdown {
+            display: flex;
+            gap: 30px;
+            margin-left: auto;
+        }
+
+        .bottom-nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .bottom-nav a:hover {
+            color: #1096EA;
+        }
+
+        .menu-icon {
+            font-size: 20px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #1096EA;
+            padding: 40px 30px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 1200px;
+            margin: auto;
+            gap: 100px; /* Adjusted gap for better spacing */
+            flex-wrap: wrap; /* Allows wrapping on smaller screens */
+        }
+
+        .hero-image {
+            flex-basis: 400px; /* Define a base size */
+            flex-grow: 1;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        .hero-text {
+            flex-basis: 400px; /* Define a base size */
+            flex-grow: 1;
+            text-align: left;
+        }
+
+        .hero-text h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: #fff; /* White color for better contrast */
+        }
+        .hero-text h3 {
+            font-size: 34px;
+            margin: 10px 0;
+            color: #f0f0f0; /* Lighter color */
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .hero-text h3:hover {
+            color: #222;
+        }
+
+        /* Slider Dots */
+        .slider-dots {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .dot {
+            height: 10px;
+            width: 10px;
+            margin: 0 4px;
+            background-color: #fff;
+            opacity: 0.6;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            opacity: 1;
+        }
+        .dot:hover {
+            opacity: 0.8;
+        }
+
+        .advantages {
+            background: #e5f1fb;
+            padding: 30px;
+        }
+        
+        /* New style to center the advantages content */
+        .advantages-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        .advantage {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .advantage i {
+            color: #1096EA;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .advantage p {
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .advantage:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+        }
+        
+        .flash-sales {
+            padding: 20px 30px;
+            background-color: #fff;
+        }
+
+        .flash-sales-header {
+            background-color: #35a8e1;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            border-radius: 8px;
+            flex-wrap: wrap; /* Allows wrapping for smaller screens */
+            gap: 15px;
+            max-width: 100%; /* Center header as well */
+            margin: 0 auto;
+        }
+
+        .flash-sales-header h2 {
+            background-color: white;
+            color: #333;
+            font-size: 16px;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+
+        .countdown {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .countdown .time-box {
+            background-color: #f36f21;
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 16px;
+            min-width: 35px;
+            text-align: center;
+        }
+
+        .show-more {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .product-grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            flex-wrap: wrap;
+            /* MODIFICATION: Added max-width and auto margin to center the grid container */
+            max-width: 100%;
+            margin: 30px auto 0;
+        }
+
+        .product-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            width: 250px;
+            text-align: center;
+            padding: 15px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .product-card h3 {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 10px;
+            height: 40px; /* Ensures titles have same height */
+        }
+
+        .product-card .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #1096EA;
+            margin-bottom: 15px;
+        }
+
+        .product-card button {
+            background-color: #1096EA;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+            transition: background-color 0.2s;
+        }
+
+        .product-card button:hover {
+            background-color: #0d7ac1;
+        }
+        
+        .just-for-you {
+            padding: 20px 30px;
+            background-color: #fff;
+        }
+        .just-for-you .product-grid{
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            flex-wrap: wrap;
+            /* MODIFICATION: Added max-width and auto margin to center the grid container */
+            max-width: 100%;
+            margin: 30px auto 0;
+        }
+
+
+
+        .section-header {
+            background-color: #35a8e1;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            border-radius: 8px;
+            max-width: 100%;
+            margin: 0 auto 30px auto;
+        }
+
+        .section-header h2 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* --- FOOTER STYLES --- */
+        .site-footer {
+            background-color: #2d2d2d;
+            color: #ccc;
+            padding: 40px 0 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-column h4 {
+            color: #fff;
+            font-size: 16px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .footer-column ul li a:hover {
+            color: #1096EA;
+        }
+        /* --- Styles Réseaux Sociaux --- */
+        /* La colonne réseaux sociaux est maintenant traitée par .footer-column */
+        .footer-column ul:has(.social-logo) { /* Cibler spécifiquement la liste de logos de RS */
+            display: flex;
+            gap: 10px;
+            margin-top: 5px;
+        }
+
+        .social-logo {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+            transition: transform 0.2s, box-shadow 0.2s;
+            background-color: white; /* pour que les logos ressortent sur le fond sombre */
+            padding: 4px;
+        }
+
+        .social-logo:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+        }
+
+        /* --- Styles Méthodes de Paiement --- */
+        .payment-methods {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .payment-logo {
+            height: 32px;
+            object-fit: contain;
+            filter: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            background-color: white;
+            border-radius: 6px;
+            padding: 4px;
+        }
+
+        .payment-logo:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 6px rgba(255,255,255,0.3);
+        }
+
+        .footer-bottom {
+            background-color: #222;
+            text-align: center;
+            padding: 20px 30px;
+            margin-top: 30px;
+            border-top: 1px solid #444;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+            font-size: 14px;
+            
+        }
+        /* --- Responsive --- */
+        @media (max-width: 768px) {
+            .bottom-nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+                padding: 10px;
+            }
+
+            .bottom-nav a {
+                display: none; /* Masque les liens par défaut sur mobile */
+            }
+
+            .bottom-nav.show-menu a {
+                display: block; /* Affiche les liens lorsque menu ouvert */
+            }
+
+            .hero-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .hero-text, .hero-image {
+                flex-basis: 100%;
+                text-align: center;
+            }
+
+            .search-bar {
+                margin: 10px 0;
+            }
+
+            .flash-sales-header,
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .advantages-content {
+                justify-content: center;
+            }
+
+            .product-grid {
+                justify-content: center;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="top-nav">
+        <a href="index.html" class="logo">BÉBÉCONFORT</a>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Rechercher un produit...">
+            <button><i class="fa fa-search"></i></button>
+        </div>
+
+        <div class="account-cart">
+            <a href="connexion.html"><i class="fa fa-user"></i> Mon Compte</a>
+            <a href="panier.html"><i class="fa fa-shopping-cart"></i> Panier</a>
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <span class="menu-icon"><i class="fa fa-bars"></i></span>
+        <div class="menu-dropdown">
+            <a href="#">Accueil</a>
+            <a href="#">Catégories ▼</a>
+            <a href="#">À propos </a>
+            <a href="#">Contact </a>
+        </div>
+    </div>
+
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-image">
+            <img src="../images/bebe.png" alt="Bébé" onerror="this.onerror=null;this.src='https://placehold.co/400x400/1096EA/FFFFFF?text=BébéConfort';">
+        </div>
+
+        <div class="hero-text">
+            <h2><strong>Habillez ses premiers instants</strong></h2>
+            <h3 ><strong>Layette Garçon</strong></h3>
+            <h3 ><strong>Layette Fille</strong></h3>
+        </div>
+    </div>
+
+    <div class="slider-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</section>
+
+<section class="advantages">
+    <div class="advantages-content">
+        <div class="advantage">
+            <i class="fa fa-shield-halved"></i>
+            <p>Paiements sûrs</p>
+        </div>
+        <div class="advantage">
+            <i class="fa fa-truck"></i>
+            <p>Livraison rapide</p>
+        </div>
+        <div class="advantage">
+            <i class="fa fa-tags"></i>
+            <p>Meilleur prix garanti</p>
+        </div>
+        <div class="advantage">
+            <i class="fa fa-certificate"></i>
+            <p>100% Authentique</p>
+        </div>
+        <div class="advantage">
+            <i class="fa fa-rotate-left"></i>
+            <p>Retours faciles</p>
+        </div>
+    </div>
+</section>
+
+<section class="flash-sales">
+    <div class="flash-sales-header">
+        <h2>flash sales products</h2>
+        <div class="countdown">
+            <span>Se termine dans</span>
+            <div class="time-box" id="hours">06</div> h
+            <div class="time-box" id="minutes">21</div> m
+            <div class="time-box" id="seconds">56</div> s
+        </div>
+        <a href="#" class="show-more">Voir plus &raquo;</a>
+    </div>
+
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="https://placehold.co/250x250/e5f1fb/333?text=Produit+1" alt="Product 1">
+            <h3>Ensemble Naissance</h3>
+            <div class="price">29.99€</div>
+            <button>Ajouter au panier</button>
+        </div>
+        <div class="product-card">
+            <img src="https://placehold.co/250x250/e5f1fb/333?text=Produit+2" alt="Product 2">
+            <h3>Pyjama Doux</h3>
+            <div class="price">19.50€</div>
+            <button>Ajouter au panier</button>
+        </div>
+        <div class="product-card">
+            <img src="https://placehold.co/250x250/e5f1fb/333?text=Produit+3" alt="Product 3">
+            <h3>Body Coton Bio</h3>
+            <div class="price">12.00€</div>
+            <button>Ajouter au panier</button>
+        </div>
+        <div class="product-card">
+            <img src="https://placehold.co/250x250/e5f1fb/333?text=Produit+4" alt="Product 4">
+            <h3>Chaussons Cuir</h3>
+            <div class="price">24.90€</div>
+            <button>Ajouter au panier</button>
+        </div>
+        <div class="product-card">
+            <img src="https://placehold.co/250x250/e5f1fb/333?text=Produit+4" alt="Product 5">
+            <h3>Chaussettes</h3>
+            <div class="price">29.90€</div>
+            <button>Ajouter au panier</button>
+        </div>
+    </div>
+</section>
+
+<section class="just-for-you">
+    <div class="section-header">
+        <h2>Juste Pour vous</h2>
+        <a href="#" class="show-more">Voir plus &raquo;</a>
+    </div>
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="https://placehold.co/250x250/e5f1fb/333?text=Produit+5" alt="Product 5">
+            <h3>Gigoteuse Étoilée</h3>
+            <div class="price">34.99€</div>
+            <button>Ajouter au panier</button>
+        </div>
+        <div class="product-card">
+            <img src="https://placehold.co/250x250/e5f1fb/333?text=Produit+6" alt="Product 6">
+            <h3>Doudou Lapin</h3>
+            <div class="price">15.00€</div>
+            <button>Ajouter au panier</button>
+        </div>
+        <div class="product-card">
+            <img src="https://placehold.co/250x250/e5f1fb/333?text=Produit+7" alt="Product 7">
+            <h3>Tapis d'Éveil</h3>
+            <div class="price">45.50€</div>
+            <button>Ajouter au panier</button>
+        </div>
+        <div class="product-card">
+            <img src="https://placehold.co/250x250/e5f1fb/333?text=Produit+8" alt="Product 8">
+            <h3>Biberon en Verre</h3>
+            <div class="price">18.90€</div>
+            <button>Ajouter au panier</button>
+        </div>
+        <div class="product-card">
+            <img src="https://placehold.co/250x250/e5f1fb/333?text=Produit+9" alt="Product 9">
+            <h3>Lit Bébé</h3>
+            <div class="price">199.00€</div>
+            <button>Ajouter au panier</button>
+        </div>
+        
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-column">
+            <h4>Service Client</h4>
+            <ul>
+                <li><a href="#">Centre D'aide</a></li>
+                <li><a href="#">Votre compte</a></li>
+                <li><a href="#">Vos Commande</a></li>
+                <li><a href="#">Comment Payer</a></li>
+                    <li><a href="#">Comment Acheter</a></li>
+                <li><a href="#">Contactez Nous</a></li>
+                <li><a href="#">Mentions Légales</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Liens Utiles</h4>
+            <ul>
+                <li><a href="#">Vêtements</a></li>
+                <li><a href="#">Alimentation</a></li>
+                <li><a href="#">Couches et Lingettes</a></li>
+                <li><a href="#">Chaussures</a></li>
+                <li><a href="#">Textile de Maternité</a></li>
+                <li><a href="#">Poussettes</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>A propos</h4>
+            <ul>
+                <li><a href="#">Qui Sommes Nous</a></li>
+                
+                <li><a href="#">Carrière</a></li>
+                <li><a href="#">Conditions Générales</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-column">
+            <h4>Methode De paiement</h4>
+            <div class="payment-methods">
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" alt="Visa" class="payment-logo"></a>
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" class="payment-logo"></a>
+                <a href="#"><img src="../images/téléchargement.png" alt="American Express" class="payment-logo"></a>
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" class="payment-logo"></a>
+                <a href="#"><img src="../images/mtn-mobile-money-logo.jpg" alt="Mtn Money" class="payment-logo"></a>
+                <a href="#"><img src="../images/orange-money-logo-png_seeklogo-440383.png" alt="orange money" class="payment-logo"></a>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h4>Réseaux Sociaux</h4>
+            <ul>
+                <li><a href="#"><img src="../images/facebook.jpg" alt="Facebook" class="social-logo"></a></li>
+                <li><a href="#"><img src="../images/instagram.jpg" alt="Instagram" class="social-logo"></a></li>
+                <li><a href="#"><img src="../images/twitter.png" alt="Twitter" class="social-logo"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; <strong>BébéConfort 2025 - Tous droits réservés</strong></p>
+    </div>
+</footer>
+
+<script>
+    // Simple countdown timer script
+    function startCountdown() {
+        const hoursElement = document.getElementById('hours');
+        const minutesElement = document.getElementById('minutes');
+        const secondsElement = document.getElementById('seconds');
+
+        if(!hoursElement || !minutesElement || !secondsElement) return;
+
+        let totalSeconds = (6 * 3600) + (21 * 60) + 56; // Initial time
+
+        const interval = setInterval(() => {
+            if (totalSeconds <= 0) {
+                clearInterval(interval);
+                document.querySelector('.countdown').innerHTML = "Vente terminée !";
+                return;
+            }
+
+            totalSeconds--;
+
+            let hours = Math.floor(totalSeconds / 3600);
+            let minutes = Math.floor((totalSeconds % 3600) / 60);
+            let seconds = totalSeconds % 60;
+
+            hoursElement.textContent = String(hours).padStart(2, '0');
+            minutesElement.textContent = String(minutes).padStart(2, '0');
+            secondsElement.textContent = String(seconds).padStart(2, '0');
+
+        }, 1000);
+    }
+
+    // Start the countdown when the page content is loaded
+    document.addEventListener('DOMContentLoaded', startCountdown);
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuIcon = document.querySelector('.menu-icon');
+        const bottomNav = document.querySelector('.bottom-nav');
+
+        menuIcon.addEventListener('click', () => {
+            bottomNav.classList.toggle('show-menu');
+        });
+
+        // Optionnel : hover également pour desktop
+        menuIcon.addEventListener('mouseenter', () => {
+            if(window.innerWidth > 768){
+                bottomNav.classList.add('show-menu');
+            }
+        });
+        menuIcon.addEventListener('mouseleave', () => {
+            if(window.innerWidth > 768){
+                bottomNav.classList.remove('show-menu');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
