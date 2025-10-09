@@ -131,57 +131,70 @@
         }
 
         .hero-content {
+            display: none;
+            animation: fadeEffect 1s ease;
+        }
+
+        .hero-content.active {
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            max-width: 1200px;
-            margin: auto;
-            gap: 30px;
-            position: relative;
         }
 
-        .hero-text {
-            flex: 1;
-            max-width: 500px;
+        .slider-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.3);
+            border: none;
+            color: white;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 24px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
         }
 
-        .hero-text h2 {
-            font-size: 2.5em;
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-            animation: slideInLeft 0.8s ease;
+        .slider-arrow:hover {
+            background: rgba(255, 255, 255, 0.5);
         }
 
-        .hero-text h3 {
-            font-size: 1.8em;
-            margin: 10px 0;
-            opacity: 0;
-            animation: fadeInUp 0.5s ease forwards;
+        .prev {
+            left: 20px;
         }
 
-        .hero-text h3:nth-child(2) {
-            animation-delay: 0.2s;
+        .next {
+            right: 20px;
         }
 
-        .hero-text h3:nth-child(3) {
-            animation-delay: 0.4s;
+        @keyframes fadeEffect {
+            from {opacity: 0.7;}
+            to {opacity: 1;}
         }
 
         .hero-image {
-            position: relative;
-            z-index: 2;
-            animation: float 6s ease-in-out infinite;
+            flex-basis: 600px; /* Augmenté de 400px à 600px */
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
         }
 
         .hero-image img {
             max-width: 100%;
             height: auto;
-            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2));
+            min-height: 400px; /* Augmenté de 300px à 400px */
+    max-height: 500px; /* Ajouté pour contrôler la taille maximale */
+    object-fit: contain;
+    animation: float 6s ease-in-out infinite;
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
+            0%, 100% {
+                transform: translateY(0) scale(1.05);
+            }
+            50% {
+                transform: translateY(-20px) scale(1.05);
+            }
         }
 
         @keyframes slideInLeft {
@@ -189,10 +202,16 @@
             to { transform: translateX(0); opacity: 1; }
         }
 
-        @keyframes fadeInUp {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
+        @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
         /* Slider Dots */
         .slider-dots {
@@ -561,9 +580,13 @@
         min-height: 250px;
     }
     
+    .hero-image {
+        flex-basis: 400px;
+    }
+    
     .hero-image img {
-        min-height: 250px;
-        max-height: 300px;
+        min-height: 300px;
+        max-height: 400px;
     }
     
     .hero-text h2 {

@@ -49,27 +49,62 @@
     </div>
 
 <section class="hero">
-    <div class="hero-content">
-        <div class="hero-image">
-            <img src="../images/bebe.png" alt="Bébé" onerror="this.onerror=null;this.src='https://placehold.co/400x400/1096EA/FFFFFF?text=BébéConfort';">
-        </div>
-
-        <div class="hero-text">
-            <h2><strong>Habillez ses premiers instants</strong></h2>
-            <h3><strong>Layette Garçon</strong></h3>
-            <h3><strong>Layette Fille</strong></h3>
-            <div class="hero-buttons">
-                <a href="#flash-sales" class="btn-primary">Découvrir</a>
-                <a href="#" class="btn-secondary">En savoir plus</a>
+    <div class="hero-slider">
+        <!-- Slide 1 -->
+        <div class="hero-content active">
+            <div class="hero-image">
+                <img src="../images/bebe.png" alt="Bébé">
+            </div>
+            <div class="hero-text">
+                <h2><strong>Habillez ses premiers instants</strong></h2>
+                <h3><strong>Layette Garçon</strong></h3>
+                <h3><strong>Layette Fille</strong></h3>
+                <div class="hero-buttons">
+                    <a href="#flash-sales" class="btn-primary">Découvrir</a>
+                    <a href="#" class="btn-secondary">En savoir plus</a>
+                </div>
             </div>
         </div>
+
+        <!-- Slide 2 -->
+        <div class="hero-content">
+            <div class="hero-image">
+                <img src="../images/promo.png" alt="Promotion">
+            </div>
+            <div class="hero-text">
+                <h2><strong>Promotions d'Automne</strong></h2>
+                <h3><strong>Jusqu'à -50%</strong></h3>
+                <h3><strong>Sur les collections</strong></h3>
+                <div class="hero-buttons">
+                    <a href="#flash-sales" class="btn-primary">Voir les offres</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="hero-content">
+            <div class="hero-image">
+                <img src="../images/nouveautes.png" alt="Nouveautés">
+            </div>
+            <div class="hero-text">
+                <h2><strong>Nouvelles Collections</strong></h2>
+                <h3><strong>Automne-Hiver 2025</strong></h3>
+                <h3><strong>Découvrez les tendances</strong></h3>
+                <div class="hero-buttons">
+                    <a href="#" class="btn-primary">Explorer</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation arrows -->
+        <button class="slider-arrow prev" aria-label="Précédent">❮</button>
+        <button class="slider-arrow next" aria-label="Suivant">❯</button>
     </div>
 
     <div class="slider-dots">
-        <span class="dot active"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
+        <span class="dot active" data-slide="0"></span>
+        <span class="dot" data-slide="1"></span>
+        <span class="dot" data-slide="2"></span>
     </div>
 </section>
 
@@ -299,6 +334,47 @@
             }
         });
     });
+
+    document.addEventListener('DOMContentLoaded', () => {
+    const slides = document.querySelectorAll('.hero-content');
+    const dots = document.querySelectorAll('.dot');
+    const prev = document.querySelector('.prev');
+    const next = document.querySelector('.next');
+    let currentSlide = 0;
+    
+    function showSlide(n) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        
+        currentSlide = (n + slides.length) % slides.length;
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+    }
+    
+    // Auto-advance slides every 5 seconds
+    let slideInterval = setInterval(() => {
+        showSlide(currentSlide + 1);
+    }, 5000);
+    
+    // Navigation arrows
+    prev.addEventListener('click', () => {
+        clearInterval(slideInterval);
+        showSlide(currentSlide - 1);
+    });
+    
+    next.addEventListener('click', () => {
+        clearInterval(slideInterval);
+        showSlide(currentSlide + 1);
+    });
+    
+    // Dot navigation
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            clearInterval(slideInterval);
+            showSlide(index);
+        });
+    });
+});
 </script>
 
 </body>
