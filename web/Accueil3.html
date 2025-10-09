@@ -16,8 +16,8 @@
         <a href="index.html" class="logo">BÉBÉCONFORT</a>
 
         <div class="search-bar">
-            <input type="text" placeholder="Rechercher un produit...">
-            <button><i class="fa fa-search"></i></button>
+            <input type="text" placeholder="Rechercher un produit..." aria-label="Rechercher">
+            <button aria-label="Lancer la recherche"><i class="fa fa-search"></i></button>
         </div>
 
         <div class="account-cart">
@@ -27,12 +27,24 @@
     </div>
 
     <div class="bottom-nav">
-        <span class="menu-icon"><i class="fa fa-bars"></i></span>
+        <span class="menu-icon" aria-label="Menu" role="button" tabindex="0">
+            <i class="fa fa-bars"></i>
+        </span>
         <div class="menu-dropdown">
             <a href="#">Accueil</a>
-            <a href="#">Catégories ▼</a>
-            <a href="#">À propos </a>
-            <a href="#">Contact </a>
+            <div class="category-dropdown">
+                <a href="#" class="dropdown-trigger">Catégories <i class="fa fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="#">Vêtements</a>
+                    <a href="#">Alimentation</a>
+                    <a href="#">Couches et Lingettes</a>
+                    <a href="#">Chaussures</a>
+                    <a href="#">Textile de Maternité</a>
+                    <a href="#">Poussettes</a>
+                </div>
+            </div>
+            <a href="#">À propos</a>
+            <a href="#">Contact</a>
         </div>
     </div>
 
@@ -44,8 +56,12 @@
 
         <div class="hero-text">
             <h2><strong>Habillez ses premiers instants</strong></h2>
-            <h3 ><strong>Layette Garçon</strong></h3>
-            <h3 ><strong>Layette Fille</strong></h3>
+            <h3><strong>Layette Garçon</strong></h3>
+            <h3><strong>Layette Fille</strong></h3>
+            <div class="hero-buttons">
+                <a href="#" class="btn-primary">Découvrir</a>
+                <a href="#" class="btn-secondary">En savoir plus</a>
+            </div>
         </div>
     </div>
 
