@@ -75,16 +75,14 @@
                 <h2><strong>Promotions d'Automne</strong></h2>
                 <h3><strong>Jusqu'à -50%</strong></h3>
                 <h3><strong>Sur les collections</strong></h3>
-                <div class="hero-buttons">
-                    <a href="#flash-sales" class="btn-primary">Voir les offres</a>
-                </div>
+                
             </div>
         </div>
 
         <!-- Slide 3 -->
         <div class="hero-content">
             <div class="hero-image">
-                <img src="../images/nouveautes.png" alt="Nouveautés">
+                <img src="images/bonheur.jpg" alt="Nouveautés">
             </div>
             <div class="hero-text">
                 <h2><strong>Nouvelles Collections</strong></h2>
@@ -96,9 +94,8 @@
             </div>
         </div>
 
-        <!-- Navigation arrows -->
-        <button class="slider-arrow prev" aria-label="Précédent">❮</button>
-        <button class="slider-arrow next" aria-label="Suivant">❯</button>
+        
+        
     </div>
 
     <div class="slider-dots">
@@ -336,45 +333,57 @@
     });
 
     document.addEventListener('DOMContentLoaded', () => {
-    const slides = document.querySelectorAll('.hero-content');
-    const dots = document.querySelectorAll('.dot');
-    const prev = document.querySelector('.prev');
-    const next = document.querySelector('.next');
-    let currentSlide = 0;
-    
-    function showSlide(n) {
-        slides.forEach(slide => slide.classList.remove('active'));
-        dots.forEach(dot => dot.classList.remove('active'));
+        const slides = document.querySelectorAll('.hero-content');
+        const dots = document.querySelectorAll('.dot');
+        const prev = document.querySelector('.prev');
+        const next = document.querySelector('.next');
+        let currentSlide = 0;
         
-        currentSlide = (n + slides.length) % slides.length;
-        slides[currentSlide].classList.add('active');
-        dots[currentSlide].classList.add('active');
-    }
-    
-    // Auto-advance slides every 5 seconds
-    let slideInterval = setInterval(() => {
-        showSlide(currentSlide + 1);
-    }, 5000);
-    
-    // Navigation arrows
-    prev.addEventListener('click', () => {
-        clearInterval(slideInterval);
-        showSlide(currentSlide - 1);
-    });
-    
-    next.addEventListener('click', () => {
-        clearInterval(slideInterval);
-        showSlide(currentSlide + 1);
-    });
-    
-    // Dot navigation
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            clearInterval(slideInterval);
-            showSlide(index);
+        function showSlide(n) {
+            // Masquer tous les slides et désactiver tous les dots
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            // Calculer l'index du nouveau slide
+            currentSlide = (n + slides.length) % slides.length;
+            
+            // Afficher le nouveau slide et activer le dot correspondant
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+        
+        // Démarrer le carousel automatique
+        let slideInterval = setInterval(() => {
+            showSlide(currentSlide + 1);
+        }, 5000); // Change de slide toutes les 5 secondes
+        
+        // Navigation avec les flèches
+        if (prev && next) {
+            prev.addEventListener('click', () => {
+                clearInterval(slideInterval); // Arrêter la transition auto
+                showSlide(currentSlide - 1);
+                // Redémarrer la transition auto
+                slideInterval = setInterval(() => showSlide(currentSlide + 1), 5000);
+            });
+            
+            next.addEventListener('click', () => {
+                clearInterval(slideInterval); // Arrêter la transition auto
+                showSlide(currentSlide + 1);
+                // Redémarrer la transition auto
+                slideInterval = setInterval(() => showSlide(currentSlide + 1), 5000);
+            });
+        }
+        
+        // Navigation avec les dots
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                clearInterval(slideInterval); // Arrêter la transition auto
+                showSlide(index);
+                // Redémarrer la transition auto
+                slideInterval = setInterval(() => showSlide(currentSlide + 1), 5000);
+            });
         });
     });
-});
 </script>
 
 </body>
