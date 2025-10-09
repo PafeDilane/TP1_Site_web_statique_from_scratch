@@ -175,6 +175,14 @@ header {
   
 }
 
+.product-card:hover {
+  /* rendre l'ombre plus grande et plus foncée */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25); 
+  
+  /*  Soulever légèrement la carte pour un effet 3D */
+  transform: translateY(-5px); 
+}
+
 .product-image {
   width: 100%;
   height: 150px;
