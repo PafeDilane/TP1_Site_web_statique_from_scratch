@@ -634,3 +634,98 @@
                 flex: 1 1 48%; /* Répartir les deux boutons sur deux colonnes si nécessaire */
             }
         }
+
+
+
+
+
+
+
+
+
+
+
+
+        /* =================================================== */
+        /* Styles pour la Section "Vous pourriez aussi aimer" (Suggestion) */
+        /* =================================================== */
+
+        /* Conteneur principal pour le défilement horizontal */
+        .related-products-container {
+            display: flex;
+            overflow-x: auto; /* Permet le défilement horizontal si les cartes dépassent */
+            gap: 20px;
+            padding-bottom: 20px; /* Espace pour la barre de défilement */
+            margin-top: 20px;
+            /* Optionnel : cacher la barre de défilement sur certains navigateurs */
+            scrollbar-width: none; /* Firefox */
+        }
+
+        /* Cacher la barre de défilement sur Webkit (Chrome, Safari) */
+        .related-products-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Style de la carte produit réduite (similaire à product-card mais plus simple) */
+        .related-product-card {
+            flex: 0 0 200px; /* Taille fixe pour chaque carte (200px de large) */
+            background-color: #ffffff;
+            border: 1px solid #e8e8e8;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none; /* Retirer le soulignement si la carte est un lien */
+            color: inherit;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .related-product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            border-color: #ff6b35;
+        }
+
+        /* Image adaptée pour le carrousel */
+        .related-product-image {
+            width: 100%;
+            height: 180px; /* Hauteur réduite pour le carrousel */
+            overflow: hidden;
+        }
+
+        .related-product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Assure que l'image couvre l'espace sans déformation */
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .related-product-card:hover .related-product-image img {
+            transform: scale(1.05); /* Petit zoom au survol */
+        }
+
+        /* Informations sous l'image */
+        .related-product-info {
+            padding: 15px 10px;
+            text-align: center;
+        }
+
+        .related-product-name {
+            font-size: 15px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 5px;
+            line-height: 1.3;
+            min-height: 38px; /* Hauteur fixe pour éviter les décalages */
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* Limiter à 2 lignes */
+            -webkit-box-orient: vertical;  
+            overflow: hidden;
+        }
+
+        .related-product-price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ff6b35;
+        }
