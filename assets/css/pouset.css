@@ -148,7 +148,7 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fill, 200px);
   justify-content: center;
-  gap: 20px;
+  gap: 40px;
   padding: 40px 20px;
   max-width: 1300px;
   margin: 0 auto;
@@ -167,7 +167,20 @@ header {
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
+  /*  Ombre subtile par défaut */
+   box-shadow: 0 8px 16px rgba(34, 104, 255, 0.35);
+   /*  Prépare la transition pour l'effet de survol */
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+ 
   
+}
+
+.product-card:hover {
+  /* rendre l'ombre plus grande et plus foncée */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25); 
+  
+  /*  Soulever légèrement la carte pour un effet 3D */
+  transform: translateY(-5px); 
 }
 
 .product-image {
