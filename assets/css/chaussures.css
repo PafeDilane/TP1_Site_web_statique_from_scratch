@@ -1,3 +1,9 @@
+/* ===========================
+   FICHIER : chaussures.css
+   Fusion de model.css + chaussures.css
+   =========================== */
+
+/* ----- GLOBAL ----- */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -143,11 +149,108 @@ header {
   color: #2268ff;
 }
 
+/* ----- SECTION PRODUIT INDIVIDUEL ----- */
+.produit-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 30px;
+}
+
+.image-principale {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.info-principale h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.prix {
+  font-size: 2.5rem;
+  color: #0066ff;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Caractéristiques */
+.caracteristiques {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.caracteristiques h3 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.caracteristiques ul {
+  list-style: none;
+}
+
+.caracteristiques li {
+  padding: 8px 0;
+  border-bottom: 1px solid #e0e0e0;
+  color: #555;
+}
+
+.caracteristiques li:last-child {
+  border-bottom: none;
+}
+
+/* Bouton d'achat */
+.btn-achat {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background: #0066ff;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: background 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-achat:hover {
+  background: #0052cc;
+}
+
+/* Section détails supplémentaires */
+.details-supplementaires {
+  padding: 30px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.details-supplementaires h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.details-supplementaires p {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
 /* ----- GRILLE DE PRODUITS ----- */
 .product-grid {
   display: grid;
- /* grid-template-columns: repeat(auto-fill, 200px);*/
-  grid-template-columns: repeat(auto-fill,minmax(199px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(199px, 1fr));
   justify-content: center;
   gap: 20px;
   padding: 40px 20px;
@@ -255,3 +358,5 @@ footer {
   border-top: 1px solid #333;
   padding-top: 15px;
 }
+
+
