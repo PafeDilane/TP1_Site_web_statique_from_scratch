@@ -16,6 +16,7 @@
         "link-name": "off",
         "button-name": "off"
       }
-    ]
+    ],
+    "meta-viewport": "off"
   }
 }
