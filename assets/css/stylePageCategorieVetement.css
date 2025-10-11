@@ -217,52 +217,201 @@ header {
   transform: scale(1.05);
 }
 
-/* ----- FOOTER ----- */
-footer {
-  background-color: #000000;
-  padding: 40px 20px 20px;
-  color: #ffffff;
-  border-top: 1px solid #333;
+
+        /* --- FOOTER STYLES --- */
+        .site-footer {
+            background-color: #000000;
+            color: #ccc;
+            padding: 40px 0 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-column h4 {
+            color: #1096EA;
+            font-size: 16px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .footer-column ul li a:hover {
+            color: #1096EA;
+        }
+        /* --- Styles Réseaux Sociaux --- */
+        /* La colonne réseaux sociaux est maintenant traitée par .footer-column */
+        .footer-column ul:has(.social-logo) { /* Cibler spécifiquement la liste de logos de RS */
+            display: flex;
+            gap: 10px;
+            margin-top: 5px;
+        }
+
+        .social-logo {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+            transition: transform 0.2s, box-shadow 0.2s;
+            background-color: white; /* pour que les logos ressortent sur le fond sombre */
+            padding: 4px;
+        }
+
+        .social-logo:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+        }
+
+        /* --- Styles Méthodes de Paiement --- */
+        .payment-methods {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .payment-logo {
+            height: 32px;
+            object-fit: contain;
+            filter: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            background-color: white;
+            border-radius: 6px;
+            padding: 4px;
+        }
+
+        .payment-logo:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 6px rgba(255,255,255,0.3);
+        }
+
+        .footer-bottom {
+            background-color: #222;
+            text-align: center;
+            padding: 20px 30px;
+            margin-top: 30px;
+            border-top: 1px solid #444;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+        }
+        /* --- Responsive --- */
+        @media (max-width: 1024px) {
+    .product-grid {
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .product-card {
+        width: calc(33.33% - 20px);
+        min-width: 200px;
+    }
 }
 
-.footer-links {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin-bottom: 30px;
+@media (max-width: 768px) {
+    .top-nav {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .search-bar {
+        width: 100%;
+        margin: 15px 0;
+    }
+    
+    .account-cart {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .hero {
+        min-height: 300px;
+        max-height: none;
+    }
+    
+    .hero-content {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .hero-image, .hero-text {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+
+    .hero-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .advantages-content {
+        gap: 15px;
+    }
+    
+    .advantage {
+        width: calc(50% - 15px);
+        min-width: 150px;
+    }
+
+    .bottom-nav {
+        top: 120px; /* Ajuster selon la hauteur de la top-nav en mobile */
+    }
+
+    body {
+        padding-top: 170px; /* Ajuster selon la hauteur combinée en mobile */
+    }
+
+    .menu-dropdown {
+        background-color: #222;
+    }
 }
 
-.footer-column {
-  min-width: 150px;
-}
-
-.footer-column h4 {
-  font-size: 16px;
-  margin-bottom: 10px;
-  color: #2268ff;
-}
-
-.footer-column ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-column ul li {
-  margin-bottom: 8px;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-.footer-column ul li:hover {
-  color: #2268ff;
-  text-decoration: underline;
-}
-
-.footer-bottom {
-  text-align: center;
-  font-size: 13px;
-  color: #cccccc;
-  border-top: 1px solid #333;
-  padding-top: 15px;
+@media (max-width: 480px) {
+    .product-card {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .footer-column {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .payment-methods,
+    .footer-column ul:has(.social-logo) {
+        justify-content: center;
+    }
 }
