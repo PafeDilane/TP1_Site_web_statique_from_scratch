@@ -29,7 +29,7 @@ body {
     min-height: 660px;
     padding: 0
 }
-
+*/
 a {
     color: inherit;
     text-decoration: inherit
@@ -120,7 +120,7 @@ a {
 .home-fw-bold {
     font-weight: 700 
 }
-*/
+
 .home-util-ellipsis {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
@@ -336,7 +336,7 @@ a {
     padding-top: 100%
 }
 
-.xz-img-wrapper>img {
+.xz-img-wrapperimg {
     height: 100%;
     left: 0;
     object-fit: contain;

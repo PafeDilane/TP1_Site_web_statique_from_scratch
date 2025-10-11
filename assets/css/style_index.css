@@ -12,6 +12,7 @@
 
         html {
     scroll-behavior: smooth;
+    height: 100%;
 }
 
 /* --- Top Navbar --- */
@@ -23,12 +24,12 @@
             background-color: #fff;
             border-bottom: 1px solid #ddd;
             position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: white;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
         .logo {
@@ -95,12 +96,12 @@
             padding: 25px 30px;
             font-size: 14px;
             position: fixed;
-    top: 60px; /* Hauteur de la top-nav */
-    left: 0;
-    right: 0;
-    background-color: #222;
-    z-index: 999;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            top: 60px; /* Hauteur de la top-nav */
+            left: 0;
+            right: 0;
+            background-color: #222;
+            z-index: 999;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         .bottom-nav .menu-dropdown {
             display: flex;
