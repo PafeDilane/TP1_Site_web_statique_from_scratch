@@ -209,7 +209,7 @@
         }
 
         .hero-text {
-            color: rgb(27, 68, 157);
+            color: #1096EA;
         }
 
         .hero-text h2 {
@@ -402,7 +402,7 @@
         }
 
         .flash-sales-header {
-            background-color: #35a8e1;
+            background-color: #1096EA;
             color: white;
             display: flex;
             justify-content: space-between;
@@ -510,7 +510,7 @@
         }
 
         .product-card button:hover {
-            background-color: #0d7ac1;
+            background-color: #1096EA;
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
@@ -532,7 +532,7 @@
 
 
         .section-header {
-            background-color: #35a8e1;
+            background-color: #1096EA;
             color: white;
             display: flex;
             justify-content: space-between;
@@ -550,7 +550,7 @@
 
         /* --- FOOTER STYLES --- */
         .site-footer {
-            background-color: #2d2d2d;
+            background-color: #000000;
             color: #ccc;
             padding: 40px 0 0;
         }
@@ -653,8 +653,6 @@
 
         .footer-bottom p {
             margin: 0;
-            font-size: 14px;
-            
         }
         /* --- Responsive --- */
         @media (max-width: 1024px) {
