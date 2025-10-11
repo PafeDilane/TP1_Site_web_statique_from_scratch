@@ -72,16 +72,117 @@ nav a:hover {
     background-color: #219150;
 }
 
-/* Pied de page */
-footer {
-    background-color: #2c3e50;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
+
+
+        /* --- FOOTER STYLES --- */
+        .site-footer {
+            background-color: #000000;
+            color: #ccc;
+            padding: 40px 0 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-column h4 {
+            color: #1096EA;
+            font-size: 16px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .footer-column ul li a:hover {
+            color: #1096EA;
+        }
+        /* --- Styles Réseaux Sociaux --- */
+        /* La colonne réseaux sociaux est maintenant traitée par .footer-column */
+        .footer-column ul:has(.social-logo) { /* Cibler spécifiquement la liste de logos de RS */
+            display: flex;
+            gap: 10px;
+            margin-top: 5px;
+        }
+
+        .social-logo {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+            transition: transform 0.2s, box-shadow 0.2s;
+            background-color: white; /* pour que les logos ressortent sur le fond sombre */
+            padding: 4px;
+        }
+
+        .social-logo:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+        }
+
+        /* --- Styles Méthodes de Paiement --- */
+        .payment-methods {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .payment-logo {
+            height: 32px;
+            object-fit: contain;
+            filter: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            background-color: white;
+            border-radius: 6px;
+            padding: 4px;
+        }
+
+        .payment-logo:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 6px rgba(255,255,255,0.3);
+        }
+
+        .footer-bottom {
+            background-color: #222;
+            text-align: center;
+            padding: 20px 30px;
+            margin-top: 30px;
+            border-top: 1px solid #444;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+        }
+
+
+
 .form-links {
     text-align: center;
     margin-top: 10px;
