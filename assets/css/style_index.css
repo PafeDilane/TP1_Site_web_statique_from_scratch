@@ -934,7 +934,7 @@
 
 
 
-
+/* 
 
     .industry-category {
         margin: 0 auto;
@@ -1103,7 +1103,7 @@
         width: 100px
     }
 
-    .industry-category .industry-list .slider_inner .industry-row .industry-item>img {
+    .industry-category .industry-list .slider_inner .industry-row .industry-item img {
         height: 48px;
         width: 48px
     }
@@ -1133,7 +1133,7 @@
         filter: brightness(90%)
     }
 
-    .industry-category .industry-list .slider_arrow_wrapper>img {
+    .industry-category .industry-list .slider_arrow_wrapper img {
         cursor: pointer;
         height: 60px;
         width: 60px
@@ -1195,3 +1195,4 @@
         inset-inline-start: auto;
         right: -20px
     }
+ */
