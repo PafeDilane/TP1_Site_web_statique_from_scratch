@@ -5,15 +5,31 @@
             font-family: Arial, sans-serif;
         }
 
+
+
         body {
             background-color: #f5f5f5;
-            padding-top: 110px; /* Hauteur combinée des deux nav bars */
+            padding-top: 110px; 
+            
+            /* Les 3 lignes magiques pour un footer au fond */
+            min-height: 100vh; /* S'assurer que le body prend au moins la hauteur du viewport */
+            display: flex;
+            flex-direction: column; /* Positionne les enfants (header, content, footer) verticalement */
         }
 
+/* 
+
+        body {
+            background-color: #f5f5f5;
+            padding-top: 110px; /* Hauteur combinée des deux nav bars 
+            
+        } 
+        */
+
         html {
-    scroll-behavior: smooth;
-    height: 100%;
-}
+            scroll-behavior: smooth;
+            height: 100%;
+        }       
 
 /* --- Top Navbar --- */
         .top-nav {
@@ -914,6 +930,10 @@
 
 
 
+/* --- Correction du Problème de Positionnement du Footer --- */
+.countries-v4 {
+    padding-bottom: 0 !important; /* Retire le grand espace blanc en bas du dernier conteneur */
+}
 
 
 
@@ -1197,3 +1217,7 @@
         right: -20px
     }
  */
+
+
+
+

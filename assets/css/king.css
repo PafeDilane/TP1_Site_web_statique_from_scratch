@@ -403,10 +403,10 @@ html.gray-filter {
         width:1280px
     }
 }
-
+/* 
 .countries-v4 {
     background-color: #fff
-}
+} 
 
 .countries-v4 .countries-v4-content {
     width: 1440px
@@ -476,7 +476,7 @@ html.gray-filter {
 .countries-v4 {
     padding-bottom: 64px;
     width: 100%
-}
+} 
 
 .countries-v4-content {
     margin: 0 auto;
@@ -699,7 +699,7 @@ html.gray-filter {
 
 .hugo3-floor-title.new .main-wrapper .right-wrapper .more-text .more-icon {
     vertical-align: middle
-}
+} */
 
 [dir=rtl] .hugo3-floor-title.new.new .right-wrapper .more-icon {
     -webkit-transform: scaleX(-1);
@@ -7335,3 +7335,4 @@ div[data-modulename=seo-long-text-component] .ltc-inner-link:hover {
     color: #51200b;
     width: var(--text-width)
 }
+
