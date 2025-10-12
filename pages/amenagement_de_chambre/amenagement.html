@@ -5,13 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KiKUU Style - Boutique</title>
   <link rel="stylesheet" href="../../assets/css/mystyle.css">
+  <!--<link rel="stylesheet" href="../../assets/css/nutrition.css">-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <!-- ----- HEADER ----- -->
   
   
-           <header>
+  <header>
     <div class="top-nav">
         <a href="index.html" class="logo">BÉBÉCONFORT</a>
 
@@ -51,8 +52,76 @@
 </header>
 
 
-  <!-- ----- GRILLE DE PRODUITS ----- -->
   <main>
+
+      <!-- Banner -->
+    <section class="banner">
+        <h1>Amenagement de Chambre pour Bébé</h1>
+        <p>Découvrez notre collection complète d'accessoires de chambre pour votre bébé. Qualité garantie, prix compétitifs.</p>
+    </section>
+
+    <div class="container">
+        <!-- Stats Section -->
+        <div class="stats-section">
+            <div class="stat-card">
+                <div class="stat-number">16+</div>
+                <div class="stat-label">Articles disponibles</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Qualité garantie</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Service client</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">⭐ 4.8</div>
+                <div class="stat-label">Satisfaction client</div>
+            </div>
+        </div>
+
+        <!-- Filter Section -->
+        <div class="filter-section">
+            <h3>Filtrer les produits</h3>
+            <div class="filter-options">
+                <div class="filter-group">
+                    <label for="category">Catégorie</label>
+                    <select id="category">
+                        <option value="">Toutes les catégories</option>
+                        <option value="biberons">Biberons & Tétines</option>
+                        <option value="tirelait">Tire-lait</option>
+                        <option value="accessoires">Accessoires</option>
+                        <option value="vaisselle">Vaisselle bébé</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="price-range">Prix maximum (FCFA)</label>
+                    <select id="price-range">
+                        <option value="">Tous les prix</option>
+                        <option value="10000">Moins de 10 000</option>
+                        <option value="30000">Moins de 30 000</option>
+                        <option value="60000">Moins de 60 000</option>
+                        <option value="120000">Moins de 120 000</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="sort">Trier par</label>
+                    <select id="sort">
+                        <option value="featured">Populaires</option>
+                        <option value="price-asc">Prix croissant</option>
+                        <option value="price-desc">Prix décroissant</option>
+                        <option value="name">Nom A-Z</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
     <div class="product-grid">
       <!-- 15 produits (Exemple avec placeholders) -->
       <div class="product-card"> <a href="../../pages/amenagement_de_chambre/berceau1.html"><img class="product-image" src="../../assets/images/amenagement_de_chambre_images/berceau 1.png" alt="Produit 1" ></a><div class="product-name">Berceau </div><div class="product-price">110.000 FCFA</div><button class="add-to-cart">Ajouter au panier</button></div>
