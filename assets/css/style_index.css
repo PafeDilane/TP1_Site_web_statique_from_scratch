@@ -49,17 +49,50 @@
         }
 
         .logo {
-            color: #1096EA;
+            color: #2268ff;
             font-weight: bold;
-            font-size: 20px;
+            font-size: 25px;
             text-decoration: none;
         }
 
         .search-bar {
+        flex: 1;
+        display: flex;
+        margin: 0 30px;
+        max-width: 400px;
+        }
+
+        .search-bar input {
+        flex: 1;
+        padding: 10px 15px;
+        border: 2px solid #2268ff;
+        border-right: none;
+        border-radius: 30px 0 0 30px;
+        font-size: 14px;
+        outline: none;
+        background-color: #fafafa;
+        }
+
+        .search-bar button {
+        padding: 0 15px;
+        background-color: #2268ff;
+        border: 2px solid #2268ff;
+        border-radius: 0 30px 30px 0;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s, transform 0.2s;
+        }
+
+
+
+/* 
+        .search-bar {
             display: flex;
             align-items: center;
             
-            /* flex: 1; */
+            /* flex: 1; 
             width: 400px;
             margin: 0 30px;
         }
@@ -75,11 +108,11 @@
         .search-bar button {
             padding: 10px 15px;
             border: none;
-            background-color: #1096EA;
+            background-color: #2268ff;
             color: white;
             border-radius: 0 20px 20px 0;
             cursor: pointer;
-        }
+        } */
 
         /* --- Account & Cart --- */
         .account-cart {
@@ -99,7 +132,7 @@
         }
 
         .account-cart a:hover {
-            color: #1096EA;
+            color: #2268ff;
         }
 
         /* --- Bottom Nav --- */
@@ -131,7 +164,7 @@
         }
 
         .bottom-nav a:hover {
-            color: #1096EA;
+            color: #2268ff;
         }
 
         .menu-icon {
@@ -232,7 +265,7 @@
 
         .hero-buttons .btn-primary {
             background-color: white;
-            color: #1096EA;
+            color: #2268ff;
             padding: 12px 30px;
             border-radius: 25px;
             text-decoration: none;
@@ -243,7 +276,7 @@
 
         .hero-buttons .btn-secondary {
             background-color: white;
-            color: #1096EA;
+            color: #2268ff;
             padding: 12px 30px;
             border-radius: 25px;
             text-decoration: none;
@@ -380,7 +413,7 @@
         }
 
         .advantage i {
-            color: #1096EA;
+            color: #2268ff;
             font-size: 28px;
             margin-bottom: 10px;
         }
@@ -402,7 +435,7 @@
         }
 
         .flash-sales-header {
-            background-color: #1096EA;
+            background-color: #2268ff;
             color: white;
             display: flex;
             justify-content: space-between;
@@ -491,12 +524,12 @@
         .product-card .price {
             font-size: 18px;
             font-weight: bold;
-            color: #1096EA;
+            color: #2268ff;
             margin-bottom: 15px;
         }
 
         .product-card button {
-            background-color: #1096EA;
+            background-color: #2268ff;
             color: white;
             border: none;
             padding: 10px 20px;
@@ -510,7 +543,7 @@
         }
 
         .product-card button:hover {
-            background-color: #1096EA;
+            background-color: #2268ff;
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
@@ -532,7 +565,7 @@
 
 
         .section-header {
-            background-color: #1096EA;
+            background-color: #2268ff;
             color: white;
             display: flex;
             justify-content: space-between;
@@ -571,7 +604,7 @@
         }
 
         .footer-column h4 {
-            color: #1096EA;
+            color: #2268ff;
             font-size: 16px;
             margin-bottom: 20px;
             text-transform: uppercase;
@@ -594,7 +627,7 @@
         }
 
         .footer-column ul li a:hover {
-            color: #1096EA;
+            color: #2268ff;
         }
         /* --- Styles Réseaux Sociaux --- */
         /* La colonne réseaux sociaux est maintenant traitée par .footer-column */
@@ -779,7 +812,7 @@
 }
 
 .dropdown-content a:hover {
-    background-color: #1096EA;
+    background-color: #2268ff;
     color: white;
     padding-left: 20px;
 }
@@ -810,28 +843,6 @@
 .category-dropdown:hover .dropdown-trigger i {
     transform: rotate(180deg);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
