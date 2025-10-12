@@ -23,6 +23,10 @@
 
 
 
+main {
+  margin-top: 130px; /* Ajuste cette valeur selon la hauteur réelle de ton header */
+}
+
 
 
 
@@ -595,7 +599,7 @@
         }
 
         .footer-column h4 {
-            color: #1096EA;
+            color: #2268ff;
             font-size: 16px;
             margin-bottom: 20px;
             text-transform: uppercase;
@@ -618,7 +622,7 @@
         }
 
         .footer-column ul li a:hover {
-            color: #1096EA;
+            color: #2268ff;
         }
         /* --- Styles Réseaux Sociaux --- */
         /* La colonne réseaux sociaux est maintenant traitée par .footer-column */
