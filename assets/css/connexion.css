@@ -10,6 +10,9 @@ body {
 
 
 
+main {
+  margin-top: 150px; /* Ajuste cette valeur selon la hauteur réelle de ton header */
+}
 
 
 
@@ -321,7 +324,7 @@ nav a:hover {
 .login-form button {
     width: 100%;
     padding: 10px;
-    background-color: #27ae60;
+    background-color: #2268ff;
     color: white;
     border: none;
     border-radius: 5px;
@@ -330,7 +333,7 @@ nav a:hover {
 }
 
 .login-form button:hover {
-    background-color: #219150;
+    background-color: #2268ff;
 }
 
 
@@ -358,7 +361,7 @@ nav a:hover {
         }
 
         .footer-column h4 {
-            color: #1096EA;
+            color: #2268ff;
             font-size: 16px;
             margin-bottom: 20px;
             text-transform: uppercase;
@@ -381,7 +384,7 @@ nav a:hover {
         }
 
         .footer-column ul li a:hover {
-            color: #1096EA;
+            color: #2268ff;
         }
         /* --- Styles Réseaux Sociaux --- */
         /* La colonne réseaux sociaux est maintenant traitée par .footer-column */
