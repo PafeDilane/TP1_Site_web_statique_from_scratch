@@ -4,144 +4,276 @@ body {
   background-color: #f6f6f6;
 }
 
+main{
+    margin-top: 150px;
+    margin-bottom: 80px; /* Ajuste selon la hauteur visuelle souhaitée */
+
+}
 /* ----- HEADER ----- */
-header {
-  background-color: #ffffff;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+
+
+
+/* --- Top Navbar --- */
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            color: #2268ff;
+            font-weight: bold;
+            font-size: 25px;
+            text-decoration: none;
+        }
+
+        .search-bar {
+        flex: 1;
+        display: flex;
+        margin: 0 30px;
+        max-width: 400px;
+        }
+
+        .search-bar input {
+        flex: 1;
+        padding: 10px 15px;
+        border: 2px solid #2268ff;
+        border-right: none;
+        border-radius: 30px 0 0 30px;
+        font-size: 14px;
+        outline: none;
+        background-color: #fafafa;
+        }
+
+        .search-bar button {
+        padding: 0 15px;
+        background-color: #2268ff;
+        border: 2px solid #2268ff;
+        border-radius: 0 30px 30px 0;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s, transform 0.2s;
+        }
+
+
+
+
+
+        /* --- Account & Cart --- */
+        .account-cart {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        .account-cart a {
+            color: black;
+            text-decoration: none;
+            font-size: 17px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .account-cart a:hover {
+            color: #2268ff;
+        }
+
+        /* --- Bottom Nav --- */
+        .bottom-nav {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            background-color: #222;
+            color: #fff;
+            padding: 25px 30px;
+            font-size: 14px;
+            position: fixed;
+            top: 60px; /* Hauteur de la top-nav */
+            left: 0;
+            right: 0;
+            background-color: #222;
+            z-index: 999;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .bottom-nav .menu-dropdown {
+            display: flex;
+            gap: 30px;
+            margin-left: auto;
+        }
+
+        .bottom-nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .bottom-nav a:hover {
+            color: #2268ff;
+        }
+
+        .menu-icon {
+            font-size: 20px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+
+
+/* Style du menu déroulant */
+.category-dropdown {
+    position: relative;
+    display: inline-block;
 }
 
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #2268ff;
+.dropdown-trigger {
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
-.search-bar {
-  flex: 1;
-  display: flex;
-  margin: 0 30px;
-  max-width: 600px;
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #222;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1000;
+    border-radius: 0 0 4px 4px;
 }
 
-.search-bar input {
-  flex: 1;
-  padding: 10px 15px;
-  border: 2px solid #2268ff;
-  border-right: none;
-  border-radius: 30px 0 0 30px;
-  font-size: 14px;
-  outline: none;
-  background-color: #fafafa;
+.dropdown-content a {
+    color: white;
+    padding: 15px 18px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
 }
 
-.search-bar button {
-  padding: 0 15px;
-  background-color: #2268ff;
-  border: 2px solid #2268ff;
-  border-radius: 0 30px 30px 0;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.2s, transform 0.2s;
+.dropdown-content a:hover {
+    background-color: #2268ff;
+    color: white;
+    padding-left: 20px;
 }
 
-.search-bar button:hover {
-  background-color: #2268ff;
-  transform: scale(1.05);
+/* Afficher le menu au survol */
+.category-dropdown:hover .dropdown-content {
+    display: block;
+    animation: fadeIn 0.3s ease;
 }
 
-.search-bar button svg {
-  width: 20px;
-  height: 20px;
-  fill: white;
+/* Animation pour l'apparition */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.user-actions {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  font-size: 14px;
-  color: #333;
-  cursor: pointer;
+/* Ajuster l'icône de la flèche */
+.dropdown-trigger i {
+    transition: transform 0.3s ease;
 }
 
-.user-actions div:hover {
-  color: #2268ff;
+.category-dropdown:hover .dropdown-trigger i {
+    transform: rotate(180deg);
 }
 
-.icon svg {
-  width: 20px;
-  height: 20px;
-  vertical-align: middle;
-  fill: currentColor;
-  margin-right: 5px;
+
+
+@media (max-width: 768px) {
+    .top-nav {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .search-bar {
+        width: 100%;
+        margin: 15px 0;
+    }
+    
+    .account-cart {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .hero {
+        min-height: 300px;
+        max-height: none;
+    }
+    
+    .hero-content {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .hero-image, .hero-text {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+
+    .hero-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .advantages-content {
+        gap: 15px;
+    }
+    
+    .advantage {
+        width: calc(50% - 15px);
+        min-width: 150px;
+    }
+
+    .bottom-nav {
+        top: 120px; /* Ajuster selon la hauteur de la top-nav en mobile */
+    }
+
+    body {
+        padding-top: 170px; /* Ajuster selon la hauteur combinée en mobile */
+    }
+
+    .menu-dropdown {
+        background-color: #222;
+    }
 }
 
-/* ----- NAVBAR ----- */
-.navbar {
-  position: relative;
-  padding: 10px 20px;
-}
 
-.menu-toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
 
-.menu-toggle svg {
-  width: 28px;
-  height: 28px;
-  fill: #333;
-}
 
-.menu {
-  display: none;
-  flex-direction: column;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  margin-top: 10px;
-  padding: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  position: absolute;
-  z-index: 99;
-}
 
-.menu.active {
-  display: flex;
-}
 
-.menu a {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 8px;
-  color: #333;
-  text-decoration: none;
-  font-size: 14px;
-  border-radius: 5px;
-  transition: background 0.2s;
-}
 
-.menu a svg {
-  width: 20px;
-  height: 20px;
-  fill: #2268ff;
-}
 
-.menu a:hover {
-  background: #f5f5f5;
-  color: #2268ff;
-}
+
+
+
+
+
+
         
         .container {
             max-width: 900px;
@@ -155,7 +287,7 @@ header {
         h1 {
             text-align: center;
             margin-bottom: 30px;
-            color: #2c3e50;
+            color:#2268ff;
             font-size: 28px;
             position: relative;
             padding-bottom: 15px;
@@ -188,7 +320,7 @@ header {
         }
         
         th {
-            background-color: #2c3e50;
+            background-color: #ff6b35;
             color: white;
             font-weight: 600;
         }
@@ -211,7 +343,7 @@ header {
         .promo-section h3 {
             margin-bottom: 15px;
             font-size: 18px;
-            color: #2c3e50;
+            color: #2268ff;
         }
         
         .promo-input {
@@ -261,7 +393,7 @@ header {
         .cart-totals h3 {
             margin-bottom: 20px;
             font-size: 20px;
-            color: #2c3e50;
+            color: #2268ff;
             border-bottom: 2px solid #eaeaea;
             padding-bottom: 10px;
         }
@@ -278,7 +410,7 @@ header {
             font-weight: bold;
             font-size: 20px;
             border-bottom: none;
-            color: #2c3e50;
+            color: #2268ff;
         }
         
         .customer-note {
@@ -288,7 +420,7 @@ header {
         .customer-note h3 {
             margin-bottom: 15px;
             font-size: 18px;
-            color: #2c3e50;
+            color:#2268ff;
         }
         
         textarea {
@@ -315,7 +447,7 @@ header {
         .payment-section h3 {
             margin-bottom: 20px;
             font-size: 20px;
-            color: #2c3e50;
+            color:#2268ff;
             border-bottom: 2px solid #eaeaea;
             padding-bottom: 10px;
         }
@@ -371,7 +503,7 @@ header {
         
         .payment-option h4 {
             margin-bottom: 10px;
-            color: #2c3e50;
+            color: #ff6b35;
         }
         
         .payment-option p {
@@ -384,11 +516,11 @@ header {
             padding: 18px;
             margin-top: 30px;
             font-size: 18px;
-            background: linear-gradient(to right, #2c3e50, #34495e);
+            background: linear-gradient(to right, #ff6b35, #ff6b35);
         }
         
         .checkout-btn:hover {
-            background: linear-gradient(to right, #34495e, #2c3e50);
+            background: linear-gradient(to right, #ff6b35, #ff6b35);
         }
         
         .note {
@@ -426,7 +558,7 @@ header {
         }
 
         .footer-column h4 {
-            color: #1096EA;
+            color: #2268ff;
             font-size: 16px;
             margin-bottom: 20px;
             text-transform: uppercase;
@@ -449,7 +581,7 @@ header {
         }
 
         .footer-column ul li a:hover {
-            color: #1096EA;
+            color: #2268ff;
         }
         /* --- Styles Réseaux Sociaux --- */
         /* La colonne réseaux sociaux est maintenant traitée par .footer-column */
@@ -522,6 +654,11 @@ header {
     }
 }
 
+
+
+
+
+ 
 @media (max-width: 768px) {
     .top-nav {
         flex-direction: column;
