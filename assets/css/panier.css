@@ -409,6 +409,7 @@ header {
             padding: 40px 0 0;
         }
 
+
         .footer-content {
             display: flex;
             justify-content: space-between;
@@ -599,3 +600,4 @@ header {
         justify-content: center;
     }
 }
+
