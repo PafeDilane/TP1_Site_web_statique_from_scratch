@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KiKUU Style - Boutique</title>
   <link rel="stylesheet" href="../../assets/css/mystyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <!-- ----- HEADER ----- -->
+ <!-- ----- HEADER ----- -->
   <header>
     <div class="top-nav">
         <a href="index.html" class="logo">BÉBÉCONFORT</a>
@@ -47,27 +48,167 @@
     </div>
 </header>
 
+
+
+<main>
+    <!-- Banner -->
+    <section class="banner">
+        <h1><strong>ACCESSOIRES POUR BEBE</strong></h1>
+        <p>Découvrez notre collection complète d'articles de nutrition pour votre bébé. Qualité garantie, prix compétitifs.</p>
+    </section>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Stats Section -->
+        <div class="stats-section">
+            <div class="stat-card">
+                <div class="stat-number">16+</div>
+                <div class="stat-label">Articles disponibles</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Qualité garantie</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Service client</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">⭐ 4.8</div>
+                <div class="stat-label">Satisfaction client</div>
+            </div>
+        </div>
+
+        <!-- Filter Section -->
+        <div class="filter-section">
+            <h3>Filtrer les produits</h3>
+            <div class="filter-options">
+                <div class="filter-group">
+                    <label for="category">Catégorie</label>
+                    <select id="category">
+                        <option value="">Toutes les catégories</option>
+                        <option value="biberons">Biberons & Tétines</option>
+                        <option value="tirelait">Tire-lait</option>
+                        <option value="accessoires">Accessoires</option>
+                        <option value="vaisselle">Vaisselle bébé</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="price-range">Prix maximum (FCFA)</label>
+                    <select id="price-range">
+                        <option value="">Tous les prix</option>
+                        <option value="10000">Moins de 10 000</option>
+                        <option value="30000">Moins de 30 000</option>
+                        <option value="60000">Moins de 60 000</option>
+                        <option value="120000">Moins de 120 000</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="sort">Trier par</label>
+                    <select id="sort">
+                        <option value="featured">Populaires</option>
+                        <option value="price-asc">Prix croissant</option>
+                        <option value="price-desc">Prix décroissant</option>
+                        <option value="name">Nom A-Z</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+
+
+
   <!-- ----- GRILLE DE PRODUITS ----- -->
-  <main>
+
+      <!-- Banner -->
+    <section class="banner">
+        <h1><strong>Amenagement de Chambre pour Bébé</strong></h1>
+        <p>Découvrez notre collection complète d'accessoires de chambre pour votre bébé. Qualité garantie, prix compétitifs.</p>
+    </section>
+
+    <div class="container">
+        <!-- Stats Section -->
+        <div class="stats-section">
+            <div class="stat-card">
+                <div class="stat-number">16+</div>
+                <div class="stat-label">Articles disponibles</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Qualité garantie</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Service client</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">⭐ 4.8</div>
+                <div class="stat-label">Satisfaction client</div>
+            </div>
+        </div>
+
+        <!-- Filter Section -->
+        <div class="filter-section">
+            <h3>Filtrer les produits</h3>
+            <div class="filter-options">
+                <div class="filter-group">
+                    <label for="category">Catégorie</label>
+                    <select id="category">
+                        <option value="">Toutes les catégories</option>
+                        <option value="biberons">Biberons & Tétines</option>
+                        <option value="tirelait">Tire-lait</option>
+                        <option value="accessoires">Accessoires</option>
+                        <option value="vaisselle">Vaisselle bébé</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="price-range">Prix maximum (FCFA)</label>
+                    <select id="price-range">
+                        <option value="">Tous les prix</option>
+                        <option value="10000">Moins de 10 000</option>
+                        <option value="30000">Moins de 30 000</option>
+                        <option value="60000">Moins de 60 000</option>
+                        <option value="120000">Moins de 120 000</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="sort">Trier par</label>
+                    <select id="sort">
+                        <option value="featured">Populaires</option>
+                        <option value="price-asc">Prix croissant</option>
+                        <option value="price-desc">Prix décroissant</option>
+                        <option value="name">Nom A-Z</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
     <div class="product-grid">
       <!-- 15 produits (Exemple avec placeholders) -->
-      <div class="product-card"><a href="Accessoire1.html"><img class="product-image" src="../../assets/images/accessoires_images/Image1.jpeg" alt="Produit 1"></a><div class="product-name">Bavoir Lou</div><div class="product-price">24 000 FCFA</div><button class="add-to-cart">Ajouter au panier</button></div>
-      <div class="product-card"><a href="Accessoire2.html"><img class="product-image" src="../../assets/images/accessoires_images/Image2.jpeg "alt="Produit 2"></a><div class="product-name">Bavoir à Points</div><div class="product-price">19 000 FCFA</div><button class="add-to-cart">Ajouter au panier</button></div>
-      <div class="product-card"><a href="Accessoire3.html"><img class="product-image" src="../../assets/images/accessoires_images/Image3.jpeg "alt="Produit 3"></a><div class="product-name">Bavoir à nounours</div><div class="product-price">19 000 FCFA</div><button class="add-to-cart">Ajouter au panier</button></div>
-      <div class="product-card"><a href="Accessoire4.html"><img class="product-image" src="../../assets/images/accessoires_images/Image4.jpeg "alt="Produit 4"></a><div class="product-name">Lange gDiapers</div><div class="product-price">20 000 FCFA</div><button class="add-to-cart">Ajouter au panier</button></div>
-      <div class="product-card"><a href="Accessoire5.html"><img class="product-image" src="../../assets/images/accessoires_images/Image5.jpeg" alt="Produit 5"></a><div class="product-name">Lange Classique</div><div class="product-price">16 000 FCFA</div><button class="add-to-cart">Ajouter au panier</button></div>
-      <div class="product-card"><a href="Accessoire6.html"><img class="product-image" src="../../assets/images/accessoires_images/Image6.jpeg" alt="Produit 6"></a><div class="product-name">Couverture Marmar Copenhagen </div><div class="product-price"> 60 000 FCFA</div><button class="add-to-cart">Ajouter au panier</button></div>
-      <div class="product-card"><a href="Accessoire7.html"><img class="product-image" src="../../assets/images/accessoires_images/Image7.jpeg" alt="Produit 7"></a><div class="product-name">Couverture Mori</div><div class="product-price">40 000 FCFA</div><button class="add-to-cart">Ajouter au panier</button></div>
-      <div class="product-card"><a href="Accessoire8.html"><img class="product-image" src="../../assets/images/accessoires_images/Image8.jpeg" alt="Produit 8"></a><div class="product-name">Cape de bain Blaireau</div><div class="product-price"> 22 000 FCFA</div><button class="add-to-cart">Ajouter au panier</button></div>
-      <div class="product-card"><a href="Accessoire9.html"><img class="product-image" src="../../assets/images/accessoires_images/Image9.jpeg" alt="Produit 9"></a><div class="product-name">Cape de bain</div><div class="product-price">30 000 FCFA</div><button class="add-to-cart">Ajouter au panier</button></div>
-      <div class="product-card"><a href="Accessoire10.html"><img class="product-image" src="../../assets/images/accessoires_images/Image10.jpeg" alt="Produit 10"></a><div class="product-name">Cape de bain Ours </div><div class="product-price">35 000 FCFA</div><button class="add-to-cart">Ajouter au panier</button></div>
-      <div class="product-card"><a href="Accessoire11.html"><img class="product-image" src="../../assets/images/accessoires_images/Image11.jpeg" alt="Produit 11"></a><div class="product-name">Serviette Petit Bateau</div><div class="product-price">20 000 FCFA</div><button class="add-to-cart">Ajouter au panier</button></div>
-      <div class="product-card"><a href="Accessoire12.html"><img class="product-image" src="../../assets/images/accessoires_images/Image12.jpeg" alt="Produit 12"></a><div class="product-name">Serviette Doudou & Compagnie</div><div class="product-price">30 000 FCFA</div><button class="add-to-cart">Ajouter au panier</button></div>
-      <div class="product-card"><a href="Accessoire13.html"><img class="product-image" src="../../assets/images/accessoires_images/Image13.jpeg" alt="Produit 13"></a><div class="product-name">Ours en Peluche</div><div class="product-price">15 000 FCFA</div><button class="add-to-cart">Ajouter au panier</button></div>
-      <div class="product-card"><a href="Accessoire14.html"><img class="product-image" src="../../assets/images/accessoires_images/Image14.jpeg" alt="Produit 14"></a><div class="product-name">Doudou Renard</div><div class="product-price">4 000 FCFA</div><button class="add-to-cart">Ajouter au panier</button></div>
-      <div class="product-card"><a href="Accessoire15.html"><img class="product-image" src="../../assets/images/accessoires_images/Image15.jpeg" alt="Produit 15"></a><div class="product-name">Doudou Lapin</div><div class="product-price">4 000 FCFA</div><button class="add-to-cart">Ajouter au panier</button></div>
+            <div class="product-card"><a href="Accessoire1.html"><img class="product-image" src="../../assets/images/accessoires_images/Image1.jpeg" alt="Produit 1"></a><div class="product-name">Bavoir Lou</div><div class="product-price">24 000 FCFA</div><button class="add-to-cart">Ajouter au panier</button></div>
+            <div class="product-card"><a href="Accessoire2.html"><img class="product-image" src="../../assets/images/accessoires_images/Image2.jpeg "alt="Produit 2"></a><div class="product-name">Bavoir à Points</div><div class="product-price">19 000 FCFA</div><button class="add-to-cart">Ajouter au panier</button></div>
+            <div class="product-card"><a href="Accessoire3.html"><img class="product-image" src="../../assets/images/accessoires_images/Image3.jpeg "alt="Produit 3"></a><div class="product-name">Bavoir à nounours</div><div class="product-price">19 000 FCFA</div><button class="add-to-cart">Ajouter au panier</button></div>
+            <div class="product-card"><a href="Accessoire4.html"><img class="product-image" src="../../assets/images/accessoires_images/Image4.jpeg "alt="Produit 4"></a><div class="product-name">Lange gDiapers</div><div class="product-price">20 000 FCFA</div><button class="add-to-cart">Ajouter au panier</button></div>
+            <div class="product-card"><a href="Accessoire5.html"><img class="product-image" src="../../assets/images/accessoires_images/Image5.jpeg" alt="Produit 5"></a><div class="product-name">Lange Classique</div><div class="product-price">16 000 FCFA</div><button class="add-to-cart">Ajouter au panier</button></div>
+            <div class="product-card"><a href="Accessoire6.html"><img class="product-image" src="../../assets/images/accessoires_images/Image6.jpeg" alt="Produit 6"></a><div class="product-name">Couverture Marmar Copenhagen </div><div class="product-price"> 60 000 FCFA</div><button class="add-to-cart">Ajouter au panier</button></div>
+            <div class="product-card"><a href="Accessoire7.html"><img class="product-image" src="../../assets/images/accessoires_images/Image7.jpeg" alt="Produit 7"></a><div class="product-name">Couverture Mori</div><div class="product-price">40 000 FCFA</div><button class="add-to-cart">Ajouter au panier</button></div>
+            <div class="product-card"><a href="Accessoire8.html"><img class="product-image" src="../../assets/images/accessoires_images/Image8.jpeg" alt="Produit 8"></a><div class="product-name">Cape de bain Blaireau</div><div class="product-price"> 22 000 FCFA</div><button class="add-to-cart">Ajouter au panier</button></div>
+            <div class="product-card"><a href="Accessoire9.html"><img class="product-image" src="../../assets/images/accessoires_images/Image9.jpeg" alt="Produit 9"></a><div class="product-name">Cape de bain</div><div class="product-price">30 000 FCFA</div><button class="add-to-cart">Ajouter au panier</button></div>
+            <div class="product-card"><a href="Accessoire10.html"><img class="product-image" src="../../assets/images/accessoires_images/Image10.jpeg" alt="Produit 10"></a><div class="product-name">Cape de bain Ours </div><div class="product-price">35 000 FCFA</div><button class="add-to-cart">Ajouter au panier</button></div>
+            <div class="product-card"><a href="Accessoire11.html"><img class="product-image" src="../../assets/images/accessoires_images/Image11.jpeg" alt="Produit 11"></a><div class="product-name">Serviette Petit Bateau</div><div class="product-price">20 000 FCFA</div><button class="add-to-cart">Ajouter au panier</button></div>
+            <div class="product-card"><a href="Accessoire12.html"><img class="product-image" src="../../assets/images/accessoires_images/Image12.jpeg" alt="Produit 12"></a><div class="product-name">Serviette Doudou & Compagnie</div><div class="product-price">30 000 FCFA</div><button class="add-to-cart">Ajouter au panier</button></div>
+            <div class="product-card"><a href="Accessoire13.html"><img class="product-image" src="../../assets/images/accessoires_images/Image13.jpeg" alt="Produit 13"></a><div class="product-name">Ours en Peluche</div><div class="product-price">15 000 FCFA</div><button class="add-to-cart">Ajouter au panier</button></div>
+            <div class="product-card"><a href="Accessoire14.html"><img class="product-image" src="../../assets/images/accessoires_images/Image14.jpeg" alt="Produit 14"></a><div class="product-name">Doudou Renard</div><div class="product-price">4 000 FCFA</div><button class="add-to-cart">Ajouter au panier</button></div>
+            <div class="product-card"><a href="Accessoire15.html"><img class="product-image" src="../../assets/images/accessoires_images/Image15.jpeg" alt="Produit 15"></a><div class="product-name">Doudou Lapin</div><div class="product-price">4 000 FCFA</div><button class="add-to-cart">Ajouter au panier</button></div>
     </div>
   </main>
+
+
 
     <!-- Footer -->
     <footer class="site-footer">
