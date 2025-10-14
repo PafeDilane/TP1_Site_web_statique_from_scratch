@@ -3,16 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page categorie vetement</title>
-  <link rel="stylesheet" href="../../assets/css/stylePageCategorieVetement.css">
+  <title>page detail vetement</title>
+  <link rel="stylesheet" href="../../assets/css/stylePageDetailVetement.css">
 </head>
+
 <body>
+   
   <!-- ----- HEADER ----- -->
   <header>
-    <div class="logo">BEBE CONFORT </div>
-
+   
+    
+    <div class="logo">BEBE CONFORT</div>
+    <div class="logo">  <img class="logo1" src = "icone categorie vetement.png" />      </div>
     <div class="search-bar">
-      <input type="text" placeholder="Rechercher un vêtement...">
+      <input type="text" placeholder="Rechercher un produit...">
       <button>
         <!-- Loupe SVG -->
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -78,25 +82,49 @@
       </a>
     </div>
   </nav>
-  <div class="logo">Categorie vetements </div>
 
-  <!-- ----- GRILLE DE PRODUITS ----- -->
-  <main>
-    <div class="product-grid">
-      <!-- 15 produits (Exemple avec placeholders) -->
-    
-      <a href="../../pages/couches_et_lingettes/couche1.html"> <div class="product-card">  <img class="product-image" src="../../assets/images/couches_et_lingettes_images/couches1.jpg" alt="Produit 9"> <div class="product-name">Paquet de couches getables molfix</div>  <div class="product-price">7.900 FCFA</div>  <button class="add-to-cart">Ajouter au panier</button>  </div>   </a>
-      <a href="../../pages/couches_et_lingettes/couche2.html"> <div class="product-card">  <img class="product-image" src="../../assets/images/couches_et_lingettes_images/couches2.jpg" alt="Produit 9"> <div class="product-name">Softcare Premium Soft - Couche jetables</div>  <div class="product-price">1.100 FCFA</div>  <button class="add-to-cart">Ajouter au panier</button>  </div>   </a>
-      <a href="../../pages/couches_et_lingettes/couche3.html"> <div class="product-card">  <img class="product-image" src="../../assets/images/couches_et_lingettes_images/couches3.jpg" alt="Produit 9"> <div class="product-name">Couche Jetable - Joylinks - Pour bébé de 4 à 9kg</div>  <div class="product-price">7.000 FCFA</div>  <button class="add-to-cart">Ajouter au panier</button>  </div>   </a>
-      <a href="../../pages/couches_et_lingettes/couche4.html"> <div class="product-card">  <img class="product-image" src="../../assets/images/couches_et_lingettes_images/couches4.jpg" alt="Produit 9"> <div class="product-name">Couche Jetable - Joylink - 3-6kg - 109 Pièces</div>  <div class="product-price">7.500 FCFA</div>  <button class="add-to-cart">Ajouter au panier</button>  </div>   </a>
-      <a href="../../pages/couches_et_lingettes/couche5.html"> <div class="product-card">  <img class="product-image" src="../../assets/images/couches_et_lingettes_images/couches5.jpg" alt="Produit 9"> <div class="product-name">40 couches pampers</div>  <div class="product-price">5.250 FCFA</div>  <button class="add-to-cart">Ajouter au panier</button>  </div>   </a>
-      <a href="../../pages/couches_et_lingettes/couche6.html"> <div class="product-card">  <img class="product-image" src="../../assets/images/couches_et_lingettes_images/couches6.jpg" alt="Produit 9"> <div class="product-name">Couches confortables anti-fuite - Molfix - Taille 4</div>  <div class="product-price">7.500 FCFA</div>  <button class="add-to-cart">Ajouter au panier</button>  </div>   </a>
-      <a href="../../pages/couches_et_lingettes/lingette1.html"> <div class="product-card">  <img class="product-image" src="../../assets/images/couches_et_lingettes_images/lingette1.jpg" alt="Produit 9"> <div class="product-name">Lingette Bébé Et Démaquillante - A l'Aloe Vera</div>  <div class="product-price">600 FCFA</div>  <button class="add-to-cart">Ajouter au panier</button>  </div>   </a>
-      <a href="../../pages/couches_et_lingettes/lingette2.html"> <div class="product-card">  <img class="product-image" src="../../assets/images/couches_et_lingettes_images/lingette2.jpg" alt="Produit 9"> <div class="product-name">Softcare - Lingettes Ultra propre - Enrichi</div>  <div class="product-price">450 FCFA</div>  <button class="add-to-cart">Ajouter au panier</button>  </div>   </a>
-      <a href="../../pages/couches_et_lingettes/lingette3.html"> <div class="product-card">  <img class="product-image" src="../../assets/images/couches_et_lingettes_images/lingette3.jpg" alt="Produit 9"> <div class="product-name">Lingettes humides Molfix - Isotoniques - Peaux sensibles</div>  <div class="product-price">950 FCFA</div>  <button class="add-to-cart">Ajouter au panier</button>  </div>   </a>
-      <a href="../../pages/couches_et_lingettes/lingette4.html"> <div class="product-card">  <img class="product-image" src="../../assets/images/couches_et_lingettes_images/lingette4.jpg" alt="Produit 9"> <div class="product-name">Lingettes humides Molfix - Isotoniques - Fresh Clean</div>  <div class="product-price">950 FCFA</div>  <button class="add-to-cart">Ajouter au panier</button>  </div>   </a>
-    </div>    
-      <!-- Footer -->
+<div class="container">
+              <!-- En-tête du produit -->
+       <div class="produit-header">
+    <!-- Image du produit -->
+    <div>
+        <img src="../../assets/images/couches_et_lingettes_images/lingette1.jpg" 
+             alt="Kit vêtement bébé bleu 5 pièces" 
+             class="image-principale">
+    </div>
+
+    <!-- Informations principales -->
+    <div class="info-principale">
+        <h1>Lingette Bébé Et Démaquillante - Onlem - 90 pièces - A l'Aloe Vera - Sans Paraben - sans alcool </h1>
+        <div class="prix">600 FCFA</div>
+        
+        <p class="description">
+            Lingettes Bébé Onlem : Nettoyage doux et efficace pour votre bébé avec protection avec l'Aloe Vera
+            <br>Les Lingettes Bébé Onlem sont enrichies à l'aloe vera, offrant un soin apaisant et hydratant pour la peau délicate de votre bébé. L'aloe vera aide à prévenir les irritations et laisse la peau douce et propre après chaque utilisation.
+            <br><br>Formule sûre et sans produits Nocifs
+            <br>Ces lingettes sont formulées sans paraben et sans alcool, garantissant une utilisation sans risque pour la santé de votre bébé. La sécurité est une priorité, et les Lingettes Bébé Onlem assurent une protection optimale contre les impuretés tout en respectant la peau sensible des tout-petits.
+            <br>Nettoyage efficace et pratique
+            <br>Avec une quantité généreuse de 90 pièces par paquet, les Lingettes Bébé Onlem sont idéales pour un usage quotidien. Que ce soit pour nettoyer les mains, le visage, ou changer les couches, ces lingettes assurent un nettoyage efficace et en douceur à chaque utilisation.
+        </p>
+
+        <!-- Caractéristiques -->
+        <div class="caracteristiques">
+            <h3>Caractéristiques</h3>
+            <ul>
+                <li><strong>Pièces :</strong> 90 pièces</li>
+                <li><strong>Marque :</strong> Onlem </li>
+            </ul>
+        </div>
+        <a href="#" class="btn-achat">
+                    Ajouter au panier
+                </a>
+    </div>
+</div>
+
+<!-- Bouton d'achat -->
+        
+      
+    <!-- Footer -->
     <footer class="site-footer">
     <div class="footer-content">
         <div class="footer-column">

@@ -3,16 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page categorie vetement</title>
-  <link rel="stylesheet" href="../../assets/css/stylePageCategorieVetement.css">
+  <title>page detail vetement</title>
+  <link rel="stylesheet" href="../../assets/css/stylePageDetailVetement.css">
 </head>
+
 <body>
+   
   <!-- ----- HEADER ----- -->
   <header>
-    <div class="logo">BEBE CONFORT </div>
-
+   
+    
+    <div class="logo">BEBE CONFORT</div>
+    <div class="logo">  <img class="logo1" src = "icone categorie vetement.png" />      </div>
     <div class="search-bar">
-      <input type="text" placeholder="Rechercher un vêtement...">
+      <input type="text" placeholder="Rechercher un produit...">
       <button>
         <!-- Loupe SVG -->
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -78,25 +82,50 @@
       </a>
     </div>
   </nav>
-  <div class="logo">Categorie vetements </div>
 
-  <!-- ----- GRILLE DE PRODUITS ----- -->
-  <main>
-    <div class="product-grid">
-      <!-- 15 produits (Exemple avec placeholders) -->
-    
-      <a href="../../pages/couches_et_lingettes/couche1.html"> <div class="product-card">  <img class="product-image" src="../../assets/images/couches_et_lingettes_images/couches1.jpg" alt="Produit 9"> <div class="product-name">Paquet de couches getables molfix</div>  <div class="product-price">7.900 FCFA</div>  <button class="add-to-cart">Ajouter au panier</button>  </div>   </a>
-      <a href="../../pages/couches_et_lingettes/couche2.html"> <div class="product-card">  <img class="product-image" src="../../assets/images/couches_et_lingettes_images/couches2.jpg" alt="Produit 9"> <div class="product-name">Softcare Premium Soft - Couche jetables</div>  <div class="product-price">1.100 FCFA</div>  <button class="add-to-cart">Ajouter au panier</button>  </div>   </a>
-      <a href="../../pages/couches_et_lingettes/couche3.html"> <div class="product-card">  <img class="product-image" src="../../assets/images/couches_et_lingettes_images/couches3.jpg" alt="Produit 9"> <div class="product-name">Couche Jetable - Joylinks - Pour bébé de 4 à 9kg</div>  <div class="product-price">7.000 FCFA</div>  <button class="add-to-cart">Ajouter au panier</button>  </div>   </a>
-      <a href="../../pages/couches_et_lingettes/couche4.html"> <div class="product-card">  <img class="product-image" src="../../assets/images/couches_et_lingettes_images/couches4.jpg" alt="Produit 9"> <div class="product-name">Couche Jetable - Joylink - 3-6kg - 109 Pièces</div>  <div class="product-price">7.500 FCFA</div>  <button class="add-to-cart">Ajouter au panier</button>  </div>   </a>
-      <a href="../../pages/couches_et_lingettes/couche5.html"> <div class="product-card">  <img class="product-image" src="../../assets/images/couches_et_lingettes_images/couches5.jpg" alt="Produit 9"> <div class="product-name">40 couches pampers</div>  <div class="product-price">5.250 FCFA</div>  <button class="add-to-cart">Ajouter au panier</button>  </div>   </a>
-      <a href="../../pages/couches_et_lingettes/couche6.html"> <div class="product-card">  <img class="product-image" src="../../assets/images/couches_et_lingettes_images/couches6.jpg" alt="Produit 9"> <div class="product-name">Couches confortables anti-fuite - Molfix - Taille 4</div>  <div class="product-price">7.500 FCFA</div>  <button class="add-to-cart">Ajouter au panier</button>  </div>   </a>
-      <a href="../../pages/couches_et_lingettes/lingette1.html"> <div class="product-card">  <img class="product-image" src="../../assets/images/couches_et_lingettes_images/lingette1.jpg" alt="Produit 9"> <div class="product-name">Lingette Bébé Et Démaquillante - A l'Aloe Vera</div>  <div class="product-price">600 FCFA</div>  <button class="add-to-cart">Ajouter au panier</button>  </div>   </a>
-      <a href="../../pages/couches_et_lingettes/lingette2.html"> <div class="product-card">  <img class="product-image" src="../../assets/images/couches_et_lingettes_images/lingette2.jpg" alt="Produit 9"> <div class="product-name">Softcare - Lingettes Ultra propre - Enrichi</div>  <div class="product-price">450 FCFA</div>  <button class="add-to-cart">Ajouter au panier</button>  </div>   </a>
-      <a href="../../pages/couches_et_lingettes/lingette3.html"> <div class="product-card">  <img class="product-image" src="../../assets/images/couches_et_lingettes_images/lingette3.jpg" alt="Produit 9"> <div class="product-name">Lingettes humides Molfix - Isotoniques - Peaux sensibles</div>  <div class="product-price">950 FCFA</div>  <button class="add-to-cart">Ajouter au panier</button>  </div>   </a>
-      <a href="../../pages/couches_et_lingettes/lingette4.html"> <div class="product-card">  <img class="product-image" src="../../assets/images/couches_et_lingettes_images/lingette4.jpg" alt="Produit 9"> <div class="product-name">Lingettes humides Molfix - Isotoniques - Fresh Clean</div>  <div class="product-price">950 FCFA</div>  <button class="add-to-cart">Ajouter au panier</button>  </div>   </a>
-    </div>    
-      <!-- Footer -->
+<div class="container">
+              <!-- En-tête du produit -->
+       <div class="produit-header">
+    <!-- Image du produit -->
+    <div>
+        <img src="../../assets/images/couches_et_lingettes_images/lingette4.jpg" 
+             alt="Kit vêtement bébé bleu 5 pièces" 
+             class="image-principale">
+    </div>
+
+    <!-- Informations principales -->
+    <div class="info-principale">
+        <h1>Lingettes humides Molfix - Isotoniques - Fresh Clean - 60 Pièces</h1>
+        <div class="prix">950 FCFA</div>
+        
+        <p class="description">
+            Lingettes Humides Molfix – Isotoniques Fresh Clean – 60 Pièces
+            <br><br>Offrez à votre bébé ou à vous-même une hygiène douce et efficace avec les lingettes isotoniques Molfix Fresh Clean. Conçues pour éliminer jusqu’à 99 % des bactéries, elles assurent une propreté optimale sans agresser la peau. Leur texture alvéolée extensible permet de nettoyer facilement de grandes surfaces, tout en offrant une sensation de confort et de fraîcheur.
+            <br>Grâce à leur formule enrichie en extraits naturels de bambou et de coton, ces lingettes procurent un toucher délicat et respectueux de la peau, même la plus sensible. Elles conviennent aussi bien aux bébés qu’aux adultes, pour un usage quotidien en toute sécurité.
+            <br><br>Une composition naturelle et sûre
+            <br>Les lingettes Molfix sont fabriquées sans parfum, sans alcool et sans parabène, pour garantir une tolérance maximale. Testées dermatologiquement, elles sont adaptées aux peaux fragiles et ne provoquent pas d’irritation. Leur parfum doux et non agressif contribue à une expérience agréable à chaque utilisation.
+            <br><br>Hygiène et douceur au meilleur prix
+            <br>Pratiques, économiques et fiables, les lingettes Molfix Fresh Clean sont un indispensable pour les soins de bébé et l’hygiène familiale. Leur efficacité antibactérienne et leur douceur naturelle en font un choix idéal pour les parents soucieux du bien-être de leur enfant.
+        </p>
+
+        <!-- Caractéristiques -->
+        <div class="caracteristiques">
+            <h3>Caractéristiques</h3>
+            <ul>
+                <li><strong>Pièces :</strong> 60 pièces</li>
+                <li><strong>Marque :</strong> Molfix </li>
+            </ul>
+        </div>
+        <a href="#" class="btn-achat">
+                    Ajouter au panier
+                </a>
+    </div>
+</div>
+
+<!-- Bouton d'achat -->
+        
+      
+    <!-- Footer -->
     <footer class="site-footer">
     <div class="footer-content">
         <div class="footer-column">
