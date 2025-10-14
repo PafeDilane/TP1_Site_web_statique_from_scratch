@@ -288,12 +288,12 @@ main {
 
         /* Banner Section */
         .banner {
-            background: linear-gradient(135deg, #ff6b35 0%, #ff8c5f 100%);
-            color: #ffffff;
+            background: linear-gradient(135deg, #ffffff 0%, #fffefe 100%);
+            color: #2268ff;
             padding: 60px 30px;
             text-align: center;
             margin-bottom: 40px;
-            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.3);
+            box-shadow: 0 6px 20px #2268ff;
         }
 
         .banner h1 {
@@ -339,7 +339,7 @@ main {
 
         .filter-section h3::before {
             content: "⚙";
-            color: #ff6b35;
+            color: #2268ff;
             font-size: 24px;
         }
 
@@ -376,7 +376,7 @@ main {
         .filter-group select:focus,
         .filter-group input:focus {
             outline: none;
-            border-color: #ff6b35;
+            border-color: #2268ff;
             box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
         }
 
@@ -401,7 +401,7 @@ main {
         .product-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-            border-color: #ff6b35;
+            border-color: #2268ff;
         }
 
 
@@ -466,7 +466,7 @@ main {
             position: absolute;
             top: 15px;
             right: 15px;
-            background-color: #ff6b35;
+            background-color: #2268ff;
             color: #ffffff;
             padding: 6px 12px;
             border-radius: 20px;
@@ -481,7 +481,7 @@ main {
         }
 
         .product-category {
-            color: #ff6b35;
+            color: #2268ff;
             font-size: 13px;
             font-weight: 600;
             text-transform: uppercase;
@@ -503,7 +503,7 @@ main {
             padding: 15px;
             border-radius: 8px;
             margin-bottom: 15px;
-            border-left: 4px solid #ff6b35;
+            border-left: 4px solid #2268ff;
         }
 
         .product-features h4 {
@@ -530,7 +530,7 @@ main {
             content: "✓";
             position: absolute;
             left: 0;
-            color: #ff6b35;
+            color: #2268ff;
             font-weight: bold;
         }
 
@@ -555,7 +555,7 @@ main {
         }
 
         .btn-add-cart {
-            background: linear-gradient(135deg, #ff6b35 0%, #ff8c5f 100%);
+            background: linear-gradient(135deg, #2268ff 0%, #2268ff 100%);
             color: #ffffff;
             border: none;
             padding: 12px 24px;
@@ -797,7 +797,7 @@ main {
         .stat-number {
             font-size: 36px;
             font-weight: bold;
-            color: #ff6b35;
+            color:#2268ff;
             margin-bottom: 8px;
         }
 
@@ -897,7 +897,7 @@ main {
         }
 
         .detail-action-bar input[type="number"]:focus {
-            border-color: #ff6b35;
+            border-color: #2268ff;
             outline: none;
         }
 
@@ -1003,7 +1003,7 @@ main {
         .related-product-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-            border-color: #ff6b35;
+            border-color: #2268ff;
         }
 
         /* Image adaptée pour le carrousel */
@@ -1047,5 +1047,5 @@ main {
         .related-product-price {
             font-size: 20px;
             font-weight: bold;
-            color: #ff6b35;
+            color: #2268ff;
         }
