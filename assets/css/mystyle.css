@@ -18,8 +18,8 @@ main {
 
         /* Banner Section */
         .banner {
-            background: linear-gradient(135deg, #ff6b35 0%, #ff8c5f 100%);
-            color: #ffffff;
+            background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+            color: #2268ff;
             padding: 60px 30px;
             text-align: center;
             margin-bottom: 40px;
@@ -69,7 +69,7 @@ main {
 
         .filter-section h3::before {
             content: "⚙";
-            color: #ff6b35;
+            color: #2268ff;
             font-size: 24px;
         }
 
@@ -133,7 +133,7 @@ main {
         .stat-number {
             font-size: 36px;
             font-weight: bold;
-            color: #ff6b35;
+            color: #2268ff;
             margin-bottom: 8px;
         }
 
