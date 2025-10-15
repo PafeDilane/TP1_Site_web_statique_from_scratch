@@ -855,7 +855,7 @@
 
 
   .nav-wrapper {
-    background-color: #3a190b;
+    background-color: #2268ff;
     width: 100%
 }
 .nav-wrapper .nav-container {
@@ -888,7 +888,7 @@
     cursor: pointer
 }
 .nav-wrapper .nav-container .nav-cube .icon-container {
-    background-color: hsla(0,0%,100%,.08);
+    background-color: hsla(0, 0%, 100%, 0.366);
     border-radius: 30px;
     height: 60px;
     padding: 10px;
