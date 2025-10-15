@@ -6,86 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Berceau - Détails</title>
     <link rel="stylesheet" href="../../assets/css/model.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <!-- ----- HEADER ----- -->
-    <header>
-        <div class="logo">BEBE CONFORT</div>
+
+  <!-- ----- HEADER ----- -->
+  <header>
+    <div class="top-nav">
+        <a href="index.html" class="logo">BÉBÉCONFORT</a>
 
         <div class="search-bar">
-            <input type="text" placeholder="Rechercher un produit...">
-            <button>
-                <!-- Loupe SVG -->
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <path
-                        d="M15.5 14h-.79l-.28-.27a6.471 6.471 0 001.48-5.34C15.21 5.01 12.21 2 8.5 2S1.79 5.01 1.79 8.39s3 6.39 6.71 6.39c1.61 0 3.09-.59 4.23-1.56l.27.28v.79l5 4.99L20.49 19l-4.99-5zM8.5 14C6.01 14 4 11.99 4 9.5S6.01 5 8.5 5 13 7.01 13 9.5 10.99 14 8.5 14z" />
-                </svg>
-            </button>
+            <input type="text" placeholder="Que recherchez-vous ?" aria-label="Rechercher">
+            <button aria-label="Lancer la recherche"><i class="fa fa-search"></i></button>
         </div>
 
-        <div class="user-actions">
-            <div class="icon">
-                <!-- Connexion SVG -->
-                <svg viewBox="0 0 24 24">
-                    <path
-                        d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z" />
-                </svg>
-                Connexion
+        <div class="account-cart">
+            <a href="../../pages/connexion/connexion.html"><i class="fa fa-user"></i> Mon Compte</a>
+            <a href="../../pages/panier/panier.html"><i class="fa fa-shopping-cart"></i> Panier</a>
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <span class="menu-icon" aria-label="Menu" role="button" tabindex="0">
+            <i class="fa fa-bars"></i>
+        </span>
+        <div class="menu-dropdown">
+            <a href="../../index.html">Accueil</a>
+            <div class="category-dropdown">
+                <a href="#" class="dropdown-trigger">Catégories <i class="fa fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="../../pages/vêtements/pageCategorieVetement.html">Vêtements</a>
+                    <a href="../../pages/alimentation/alimentation.html">Alimentation</a>
+                    <a href="../../pages/accessoires/accessoires.html">Accessoires</a>
+                    <a href="../../pages/chaussures/chaussures.html">Chaussures</a>
+                    <a href="../../pages/textile_de_maternité/textile.html">Textile de Maternité</a>
+                    <a href="../../pages/poussettes/pouset.html">Poussettes</a>
+                    <a href="../../pages/amenagement_de_chambre/amenagement.html"> Aménagement de La chambre</a>
+                    <a href="../../pages/couches_et_Lingettes/couche_lingette.html">Couches et Lingettes </a>
+                </div>
             </div>
-            <div class="icon">
-                <!-- Panier SVG -->
-                <svg viewBox="0 0 24 24">
-                    <path
-                        d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2S15.9 22 17 22s2-.9 2-2-.9-2-2-2zM7.16 14.26l.84-2h7.92l3.24-7H5.21L4.27 4H1v2h2l3.6 7.59-1.35 2.44c-.2.36-.25.78-.13 1.17.16.54.62.92 1.17.92H19v-2H7.16z" />
-                </svg>
-                Panier
-            </div>
+            <a href="#">À propos</a>
+            <a href="#">Contact</a>
         </div>
-    </header>
+    </div>
+</header>
 
-    <!-- ----- NAVBAR ----- -->
-    <nav class="navbar">
-        <button class="menu-toggle">
-            <!-- Hamburger SVG -->
-            <svg viewBox="0 0 24 24">
-                <path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
-            </svg>
-        </button>
-        <div class="menu">
-            <a href="#">
-                <!-- Accueil SVG -->
-                <svg viewBox="0 0 24 24">
-                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
-                </svg>
-                Accueil
-            </a>
-            <a href="#">
-                <!-- Catégorie SVG -->
-                <svg viewBox="0 0 24 24">
-                    <path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
-                </svg>
-                Catégorie
-            </a>
-            <a href="#">
-                <!-- Chariot SVG -->
-                <svg viewBox="0 0 24 24">
-                    <path
-                        d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2S15.9 22 17 22s2-.9 2-2-.9-2-2-2zM7.16 14.26l.84-2h7.92l3.24-7H5.21L4.27 4H1v2h2l3.6 7.59-1.35 2.44c-.2.36-.25.78-.13 1.17.16.54.62.92 1.17.92H19v-2H7.16z" />
-                </svg>
-                Chariot
-            </a>
-            <a href="#">
-                <!-- Mon compte SVG -->
-                <svg viewBox="0 0 24 24">
-                    <path
-                        d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z" />
-                </svg>
-                Mon compte
-            </a>
-        </div>
-    </nav>
-
+<main>
     <div class="container">
         <!-- En-tête du produit -->
         <div class="produit-header">
@@ -124,7 +91,7 @@
         </div>
     </div>
 
-
+</main>
     <!-- Footer -->
     <footer class="site-footer">
     <div class="footer-content">
