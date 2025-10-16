@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KiKUU Style - Boutique</title>
+  <link rel="stylesheet" href="../../assets/css/mystyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+
+
+  <!-- ----- HEADER ----- -->
+  <header>
+    <div class="top-nav">
+        <a href="index.html" class="logo">BÉBÉCONFORT</a>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Que recherchez-vous ?" aria-label="Rechercher">
+            <button aria-label="Lancer la recherche"><i class="fa fa-search"></i></button>
+        </div>
+
+        <div class="account-cart">
+            <a href="../../pages/connexion/connexion.html"><i class="fa fa-user"></i> Mon Compte</a>
+            <a href="../../pages/panier/panier.html"><i class="fa fa-shopping-cart"></i> Panier</a>
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <span class="menu-icon" aria-label="Menu" role="button" tabindex="0">
+            <i class="fa fa-bars"></i>
+        </span>
+        <div class="menu-dropdown">
+            <a href="../../index.html">Accueil</a>
+            <div class="category-dropdown">
+                <a href="#" class="dropdown-trigger">Catégories <i class="fa fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="../../pages/vêtements/pageCategorieVetement.html">Vêtements</a>
+                    <a href="../../pages/alimentation/alimentation.html">Alimentation</a>
+                    <a href="../../pages/accessoires/accessoires.html">Accessoires</a>
+                    <a href="../../pages/chaussures/chaussures.html">Chaussures</a>
+                    <a href="../../pages/textile_de_maternité/textile.html">Textile de Maternité</a>
+                    <a href="../../pages/poussettes/pouset.html">Poussettes</a>
+                    <a href="../../pages/amenagement_de_chambre/amenagement.html"> Aménagement de La chambre</a>
+                    <a href="../../pages/couches_et_Lingettes/couche_lingette.html">Couches et Lingettes </a>
+                </div>
+            </div>
+            <a href="#">À propos</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+</header>
+
+
+<main>
+    <!-- Banner -->
+    <section class="banner">
+        <h1><strong>TEXTILE DE MATERNITE</strong></h1>
+        <p>Découvrez notre collection complète d'articles de Textile de Maternite. Qualité garantie, prix compétitifs.</p>
+    </section>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Stats Section -->
+        <div class="stats-section">
+            <div class="stat-card">
+                <div class="stat-number">16+</div>
+                <div class="stat-label">Articles disponibles</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Qualité garantie</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Service client</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">⭐ 4.8</div>
+                <div class="stat-label">Satisfaction client</div>
+            </div>
+        </div>
+
+        <!-- Filter Section -->
+        <div class="filter-section">
+            <h3>Filtrer les produits</h3>
+            <div class="filter-options">
+                <div class="filter-group">
+                    <label for="category">Catégorie</label>
+                    <select id="category">
+                        <option value="">Toutes les catégories</option>
+                        <option value="biberons">Biberons & Tétines</option>
+                        <option value="tirelait">Tire-lait</option>
+                        <option value="accessoires">Accessoires</option>
+                        <option value="vaisselle">Vaisselle bébé</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="price-range">Prix maximum (FCFA)</label>
+                    <select id="price-range">
+                        <option value="">Tous les prix</option>
+                        <option value="10000">Moins de 10 000</option>
+                        <option value="30000">Moins de 30 000</option>
+                        <option value="60000">Moins de 60 000</option>
+                        <option value="120000">Moins de 120 000</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="sort">Trier par</label>
+                    <select id="sort">
+                        <option value="featured">Populaires</option>
+                        <option value="price-asc">Prix croissant</option>
+                        <option value="price-desc">Prix décroissant</option>
+                        <option value="name">Nom A-Z</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+
+
+
+  <!-- ----- GRILLE DE PRODUITS ----- -->
+  
+    <div class="product-grid">
+      <!-- 15 produits (Exemple avec placeholders) -->
+      <div class="product-card"> <a href="../../pages/textile_de_maternité/produits1.html"><img class="product-image" src="../../assets/images/textile_de_maternite_images/Creme apaisante.jpg"
+            alt="Produit 1"></a>
+        <div class="product-name">Creme apaisante </div>
+        <div class="product-price">10.000 FCFA</div><button class="add-to-cart">Ajouter au panier</button>
+      </div>
+      <div class="product-card"><a href="../../pages/textile_de_maternité/produits2.html"><img class="product-image" src="../../assets/images/textile_de_maternite_images/Creme cicatrisante.jpg"
+            alt="Produit 14"></a>
+        <div class="product-name">Creme cicatrisante</div>
+        <div class="product-price">11.500 FCFA</div><button class="add-to-cart">Ajouter au panier</button>
+      </div>
+      <div class="product-card"><a href="../../pages/textile_de_maternité/produits3.html"><img class="product-image" src="../../assets/images/textile_de_maternite_images/creme pour mamelons.jpg"
+            alt="Produit 2"></a>
+        <div class="product-name">creme pour mamelons</div>
+        <div class="product-price">12.000 FCFA</div><button class="add-to-cart">Ajouter au panier</button>
+      </div>
+      <div class="product-card"><a href="../../pages/textile_de_maternité/produits4.html"><img class="product-image" src="../../assets/images/textile_de_maternite_images/culotte en coton.jpg"
+            alt="Produit 3"></a>
+        <div class="product-name">culotte en coton</div>
+        <div class="product-price">1.000 FCFA</div><button class="add-to-cart">Ajouter au panier</button>
+      </div>
+      <div class="product-card"><a href="../../pages/textile_de_maternité/produits5.html"><img class="product-image" src="../../assets/images/textile_de_maternite_images/culotte jetable.jpg"
+            alt="Produit 4"></a>
+        <div class="product-name">culotte jetable</div>
+        <div class="product-price">600 FCFA</div><button class="add-to-cart">Ajouter au panier</button>
+      </div>
+      <div class="product-card"><a href="../../pages/textile_de_maternité/produits6.html"><img class="product-image" src="../../assets/images/textile_de_maternite_images/Ensemble nuisette rouge.jpg"
+            alt="Produit 5"></a>
+        <div class="product-name">Ensemble nuisette rouge</div>
+        <div class="product-price">5.500 FCFA</div><button class="add-to-cart">Ajouter au panier</button>
+      </div>
+      <div class="product-card"><a href="../../pages/textile_de_maternité/produits7.html"><img class="product-image" src="../../assets/images/textile_de_maternite_images/Ensemble nuisette.jpg"
+            alt="Produit 6"></a>
+        <div class="product-name">Ensemble nuisette</div>
+        <div class="product-price">7.000 FCFA</div><button class="add-to-cart">Ajouter au panier</button>
+      </div>
+      <div class="product-card"><a href="../../pages/textile_de_maternité/produits8.html"><img class="product-image" src="../../assets/images/textile_de_maternite_images/lingettes intime.jpg"
+            alt="Produit 7"></a>
+        <div class="product-name">lingettes intimes</div>
+        <div class="product-price">1.490 FCFA</div><button class="add-to-cart">Ajouter au panier</button>
+      </div>
+      <div class="product-card"><a href="../../pages/textile_de_maternité/produits9.html"><img class="product-image" src="../../assets/images/textile_de_maternite_images/lingettes intimes.jpg"
+            alt="Produit 8"></a>
+        <div class="product-name">lingettes intimes</div>
+        <div class="product-price">2.000 FCFA</div><button class="add-to-cart">Ajouter au panier</button>
+      </div>
+      <div class="product-card"><a href="../../pages/textile_de_maternité/produits10.html"><img class="product-image" src="../../assets/images/textile_de_maternite_images/nuisette en soie.jpg"
+            alt="Produit 9"></a>
+        <div class="product-name">nuisette en soie</div>
+        <div class="product-price">8.000 FCFA</div><button class="add-to-cart">Ajouter au panier</button>
+      </div>
+</main>
+
+     <!-- Footer -->
+    <footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-column">
+            <h4>Service Client</h4>
+            <ul>
+                <li><a href="#">Centre D'aide</a></li>
+                <li><a href="#">Votre compte</a></li>
+                <li><a href="#">Vos Commandes</a></li>
+                <li><a href="#">Comment Payer</a></li>
+                    <li><a href="#">Comment Acheter</a></li>
+                <li><a href="#">Contactez Nous</a></li>
+                <li><a href="#">Mentions Légales</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Liens Utiles</h4>
+            <ul>
+                    <li><a href="../../pages/vêtements/pageCategorieVetement.html">Vêtements</a></li>
+                    <li><a href="../../pages/accessoires/accessoires.html">Accessoires</a></li>
+                    <li><a href="../../pages/chaussures/chaussures.html">Chaussures</a></li>
+                    <li><a href="../../pages/amenagement_de_chambre/amenagement.html"> Aménagement de La chambre</a></li>
+                    <li><a href="../../pages/alimentation/alimentation.html">Alimentation</a></li>
+                    <li><a href="../../pages/couches_et_lingettes/couche_lingette.html">Couches et Lingettes</a></li>
+                    <li><a href="../../pages/textile_de_maternité/textile.html">Textile de Maternité</a></li>
+                    <li><a href="../../pages/poussettes/pouset.html">Poussettes</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>A propos</h4>
+            <ul>
+                <li><a href="#">Qui Sommes Nous</a></li>
+                
+                <li><a href="#">Carrière</a></li>
+                <li><a href="#">Conditions Générales</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-column">
+            <h4>Methode De paiement</h4>
+            <div class="payment-methods">
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" alt="Visa" class="payment-logo"></a>
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" class="payment-logo"></a>
+                <a href="#"><img src="../../assets/images/images_index/téléchargement.png" alt="American Express" class="payment-logo"></a>
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" class="payment-logo"></a>
+                <a href="#"><img src="../../assets/images/images_index/mtn-mobile-money-logo.jpg" alt="Mtn Money" class="payment-logo"></a>
+                <a href="#"><img src="../../assets/images/images_index/orange-money-logo-png_seeklogo-440383.png" alt="orange money" class="payment-logo"></a>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h4>Réseaux Sociaux</h4>
+            <ul>
+                <li><a href="#"><img src="../../assets/images/images_index/facebook.jpg" alt="Facebook" class="social-logo"></a></li>
+                <li><a href="#"><img src="../../assets/images/images_index/instagram.jpg" alt="Instagram" class="social-logo"></a></li>
+                <li><a href="#"><img src="../../assets/images/images_index/twitter.png" alt="Twitter" class="social-logo"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <h5>&copy; <strong>BébéConfort 2025 - Tous droits réservés</strong></h5>
+    </div>
+</footer>
+
+</body>
+
+</html>

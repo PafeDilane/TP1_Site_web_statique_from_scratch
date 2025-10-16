@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BEBECONFORT</title>
+  <link rel="stylesheet" href="../../assets/css/panier.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+  <!-- ----- HEADER ----- -->
+  
+
+<header>
+    <div class="top-nav">
+        <a href="index.html" class="logo">BÉBÉCONFORT</a>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Que recherchez-vous ?" aria-label="Rechercher">
+            <button aria-label="Lancer la recherche"><i class="fa fa-search"></i></button>
+        </div>
+
+        <div class="account-cart">
+            <a href="../../pages/connexion/connexion.html"><i class="fa fa-user"></i> Mon Compte</a>
+            <a href="../../pages/panier/panier.html"><i class="fa fa-shopping-cart"></i> Panier</a>
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <span class="menu-icon" aria-label="Menu" role="button" tabindex="0">
+            <i class="fa fa-bars"></i>
+        </span>
+        <div class="menu-dropdown">
+            <a href="../../index.html">Accueil</a>
+            <div class="category-dropdown">
+                <a href="#" class="dropdown-trigger">Catégories <i class="fa fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="../../pages/vêtements/pageCategorieVetement.html">Vêtements</a>
+                    <a href="../../pages/alimentation/alimentation.html">Alimentation</a>
+                    <a href="../../pages/accessoires/accessoires.html">Accessoires</a>
+                    <a href="../../pages/chaussures/chaussures.html">Chaussures</a>
+                    <a href="../../pages/textile_de_maternité/textile.html">Textile de Maternité</a>
+                    <a href="../../pages/poussettes/pouset.html">Poussettes</a>
+                    <a href="../../pages/amenagement_de_chambre/amenagement.html"> Aménagement de La chambre</a>
+                </div>
+            </div>
+            <a href="#">À propos</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+</header>
+
+
+
+
+<main>
+    <div class="container">
+        <h1>Panier d'Achat</h1>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Produit</th>
+                    <th>Prix</th>
+                    <th>Quantité</th>
+                    <th>Sous-total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>T-Shirt d'Été</td>
+                    <td>100 000 FCFA</td>
+                    <td>1</td>
+                    <td>100 000 FCFA</td>
+                </tr>
+                <tr>
+                    <td>Veste Chaude</td>
+                    <td>150 000 FCFA</td>
+                    <td>1</td>
+                    <td>150 000 FCFA</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="promo-section">
+            <h3>Code Promotionnel</h3>
+            <div class="promo-input">
+                <input type="text" placeholder="Entrez votre code promo">
+                <button>APPLIQUER</button>
+            </div>
+        </div>
+        
+        <div class="cart-totals">
+            <h3>Total du Panier</h3>
+            <div class="totals-row">
+                <span>Sous-total</span>
+                <span>250 000 FCFA</span>
+            </div>
+            <div class="totals-row">
+                <span>Frais de livraison</span>
+                <span>5 000 FCFA</span>
+            </div>
+            <div class="totals-row total-row">
+                <span>Total</span>
+                <span>255 000 FCFA</span>
+            </div>
+        </div>
+        
+        <div class="customer-note">
+            <h3>Note pour la commande</h3>
+            <textarea placeholder="Ajoutez une note à votre commande (optionnel)"></textarea>
+        </div>
+        
+        <div class="payment-section">
+            <h3>Méthode de Paiement</h3>
+            <div class="payment-options">
+                <div class="payment-option selected">
+                    <div class="payment-logo orange-money">OM</div>
+                    <h4>Orange Money</h4>
+                    <p>Paiement rapide et sécurisé</p>
+                </div>
+                <div class="payment-option">
+                    <div class="payment-logo mtn-momo">MoMo</div>
+                    <h4>MTN MoMo</h4>
+                    <p>Paiement mobile facile</p>
+                </div>
+            </div>
+        </div>
+        
+        <button class="checkout-btn">PROCÉDER AU PAIEMENT</button>
+        
+        <div class="note">
+            <p>Informations pour le client</p>
+        </div>
+    </div>
+</main>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-column">
+            <h4>Service Client</h4>
+            <ul>
+                <li><a href="#">Centre D'aide</a></li>
+                <li><a href="#">Votre compte</a></li>
+                <li><a href="#">Vos Commandes</a></li>
+                <li><a href="#">Comment Payer</a></li>
+                    <li><a href="#">Comment Acheter</a></li>
+                <li><a href="#">Contactez Nous</a></li>
+                <li><a href="#">Mentions Légales</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Liens Utiles</h4>
+            <ul>
+                    <li><a href="../../pages/vêtements/pageCategorieVetement.html">Vêtements</a></li>
+                    <li><a href="../../pages/accessoires/accessoires.html">Accessoires</a></li>
+                    <li><a href="../../pages/chaussures/chaussures.html">Chaussures</a></li>
+                    <li><a href="../../pages/amenagement_de_chambre/amenagement.html"> Aménagement de La chambre</a></li>
+                    <li><a href="../../pages/alimentation/alimentation.html">Alimentation</a></li>
+                    <li><a href="../../pages/couches_et_lingettes/couche_lingette.html">Couches et Lingettes</a></li>
+                    <li><a href="../../pages/textile_de_maternité/textile.html">Textile de Maternité</a></li>
+                    <li><a href="../../pages/poussettes/pouset.html">Poussettes</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>A propos</h4>
+            <ul>
+                <li><a href="#">Qui Sommes Nous</a></li>
+                
+                <li><a href="#">Carrière</a></li>
+                <li><a href="#">Conditions Générales</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-column">
+            <h4>Methode De paiement</h4>
+            <div class="payment-methods">
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" alt="Visa" class="payment-logo"></a>
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" class="payment-logo"></a>
+                <a href="#"><img src="../../assets/images/images_index/téléchargement.png" alt="American Express" class="payment-logo"></a>
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" class="payment-logo"></a>
+                <a href="#"><img src="../../assets/images/images_index/mtn-mobile-money-logo.jpg" alt="Mtn Money" class="payment-logo"></a>
+                <a href="#"><img src="../../assets/images/images_index/orange-money-logo-png_seeklogo-440383.png" alt="orange money" class="payment-logo"></a>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h4>Réseaux Sociaux</h4>
+            <ul>
+                <li><a href="#"><img src="../../assets/images/images_index/facebook.jpg" alt="Facebook" class="social-logo"></a></li>
+                <li><a href="#"><img src="../../assets/images/images_index/instagram.jpg" alt="Instagram" class="social-logo"></a></li>
+                <li><a href="#"><img src="../../assets/images/images_index/twitter.png" alt="Twitter" class="social-logo"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <h5>&copy; <strong>BébéConfort 2025 - Tous droits réservés</strong></h5>
+    </div>
+</footer>
+
+
+
+
+</body>
+</html>

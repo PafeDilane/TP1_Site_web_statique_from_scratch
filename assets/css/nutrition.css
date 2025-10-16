@@ -1,9 +1,20 @@
-
-        * {
+/*        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+*/
+
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+/* 
+main{
+    margin-top: 120px;
+} */
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -12,68 +23,277 @@
             line-height: 1.6;
         }
 
-        /* Header Section */
-        header {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-            color: #ffffff;
-            padding: 20px 0;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
 
-        .header-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 30px;
+
+main {
+  margin-top: 130px; /* Ajuste cette valeur selon la hauteur réelle de ton header */
+}
+
+
+
+
+/* --- Top Navbar --- */
+        .top-nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 15px 30px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
         .logo {
-            font-size: 32px;
+            color: #2268ff;
             font-weight: bold;
-            color: #ff6b35;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 35px;
-        }
-
-        nav a {
-            color: #ffffff;
+            font-size: 25px;
             text-decoration: none;
-            font-weight: 500;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            padding: 8px 15px;
-            border-radius: 5px;
         }
 
-        nav a:hover {
-            background-color: #ff6b35;
-            transform: translateY(-2px);
+        .search-bar {
+        flex: 1;
+        display: flex;
+        margin: 0 30px;
+        max-width: 400px;
         }
 
-        nav a.active {
-            background-color: #ff6b35;
-            font-weight: 600;
+        .search-bar input {
+        flex: 1;
+        padding: 10px 15px;
+        border: 2px solid #2268ff;
+        border-right: none;
+        border-radius: 30px 0 0 30px;
+        font-size: 14px;
+        outline: none;
+        background-color: #fafafa;
         }
+
+        .search-bar button {
+        padding: 0 15px;
+        background-color: #2268ff;
+        border: 2px solid #2268ff;
+        border-radius: 0 30px 30px 0;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s, transform 0.2s;
+        }
+
+
+
+
+
+        /* --- Account & Cart --- */
+        .account-cart {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        .account-cart a {
+            color: black;
+            text-decoration: none;
+            font-size: 17px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .account-cart a:hover {
+            color: #2268ff;
+        }
+
+        /* --- Bottom Nav --- */
+        .bottom-nav {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            background-color: #222;
+            color: #fff;
+            padding: 25px 30px;
+            font-size: 14px;
+            position: fixed;
+            top: 60px; /* Hauteur de la top-nav */
+            left: 0;
+            right: 0;
+            background-color: #222;
+            z-index: 999;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .bottom-nav .menu-dropdown {
+            display: flex;
+            gap: 30px;
+            margin-left: auto;
+        }
+
+        .bottom-nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .bottom-nav a:hover {
+            color: #2268ff;
+        }
+
+        .menu-icon {
+            font-size: 20px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+
+
+/* Style du menu déroulant */
+.category-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-trigger {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #222;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1000;
+    border-radius: 0 0 4px 4px;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 15px 18px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #2268ff;
+    color: white;
+    padding-left: 20px;
+}
+
+/* Afficher le menu au survol */
+.category-dropdown:hover .dropdown-content {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Animation pour l'apparition */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ajuster l'icône de la flèche */
+.dropdown-trigger i {
+    transition: transform 0.3s ease;
+}
+
+.category-dropdown:hover .dropdown-trigger i {
+    transform: rotate(180deg);
+}
+
+
+
+@media (max-width: 768px) {
+    .top-nav {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .search-bar {
+        width: 100%;
+        margin: 15px 0;
+    }
+    
+    .account-cart {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .hero {
+        min-height: 300px;
+        max-height: none;
+    }
+    
+    .hero-content {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .hero-image, .hero-text {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+
+    .hero-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .advantages-content {
+        gap: 15px;
+    }
+    
+    .advantage {
+        width: calc(50% - 15px);
+        min-width: 150px;
+    }
+
+    .bottom-nav {
+        top: 120px; /* Ajuster selon la hauteur de la top-nav en mobile */
+    }
+
+    body {
+        padding-top: 170px; /* Ajuster selon la hauteur combinée en mobile */
+    }
+
+    .menu-dropdown {
+        background-color: #222;
+    }
+}
+
+
+
+
+
+
 
         /* Banner Section */
         .banner {
-            background: linear-gradient(135deg, #ff6b35 0%, #ff8c5f 100%);
-            color: #ffffff;
+            background: linear-gradient(135deg, #ffffff 0%, #fffefe 100%);
+            color: #2268ff;
             padding: 60px 30px;
             text-align: center;
             margin-bottom: 40px;
-            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.3);
+            box-shadow: 0 6px 20px #2268ff;
         }
 
         .banner h1 {
@@ -119,7 +339,7 @@
 
         .filter-section h3::before {
             content: "⚙";
-            color: #ff6b35;
+            color: #2268ff;
             font-size: 24px;
         }
 
@@ -156,7 +376,7 @@
         .filter-group select:focus,
         .filter-group input:focus {
             outline: none;
-            border-color: #ff6b35;
+            border-color: #2268ff;
             box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
         }
 
@@ -181,7 +401,7 @@
         .product-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-            border-color: #ff6b35;
+            border-color: #2268ff;
         }
 
 
@@ -246,7 +466,7 @@
             position: absolute;
             top: 15px;
             right: 15px;
-            background-color: #ff6b35;
+            background-color: #2268ff;
             color: #ffffff;
             padding: 6px 12px;
             border-radius: 20px;
@@ -261,7 +481,7 @@
         }
 
         .product-category {
-            color: #ff6b35;
+            color: #2268ff;
             font-size: 13px;
             font-weight: 600;
             text-transform: uppercase;
@@ -283,7 +503,7 @@
             padding: 15px;
             border-radius: 8px;
             margin-bottom: 15px;
-            border-left: 4px solid #ff6b35;
+            border-left: 4px solid #2268ff;
         }
 
         .product-features h4 {
@@ -310,7 +530,7 @@
             content: "✓";
             position: absolute;
             left: 0;
-            color: #ff6b35;
+            color: #2268ff;
             font-weight: bold;
         }
 
@@ -335,7 +555,7 @@
         }
 
         .btn-add-cart {
-            background: linear-gradient(135deg, #ff6b35 0%, #ff8c5f 100%);
+            background: linear-gradient(135deg, #2268ff 0%, #2268ff 100%);
             color: #ffffff;
             border: none;
             padding: 12px 24px;
@@ -358,53 +578,204 @@
             transform: scale(0.98);
         }
 
-        /* Footer */
-        footer {
-            background-color: #1a1a1a;
-            color: #ffffff;
-            padding: 50px 30px 30px;
-            margin-top: 60px;
+        /* --- FOOTER STYLES --- */
+        .site-footer {
+            background-color: #000000;
+            color: #ccc;
+            padding: 40px 0 0;
         }
 
-        .footer-container {
-            max-width: 1400px;
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1200px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 30px;
+            padding: 0 30px;
         }
 
-        .footer-section h3 {
-            color: #ff6b35;
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-column h4 {
+            color: #2268ff;
+            font-size: 16px;
             margin-bottom: 20px;
-            font-size: 20px;
+            text-transform: uppercase;
         }
 
-        .footer-section ul {
+        .footer-column ul {
             list-style: none;
+            padding: 0;
         }
 
-        .footer-section li {
-            margin-bottom: 12px;
+        .footer-column ul li {
+            margin-bottom: 10px;
         }
 
-        .footer-section a {
-            color: #cccccc;
+        .footer-column ul li a {
+            color: #ccc;
             text-decoration: none;
-            transition: color 0.3s ease;
+            font-size: 14px;
+            transition: color 0.2s;
         }
 
-        .footer-section a:hover {
-            color: #ff6b35;
+        .footer-column ul li a:hover {
+            color: #2268ff;
+        }
+        /* --- Styles Réseaux Sociaux --- */
+        /* La colonne réseaux sociaux est maintenant traitée par .footer-column */
+        .footer-column ul:has(.social-logo) { /* Cibler spécifiquement la liste de logos de RS */
+            display: flex;
+            gap: 10px;
+            margin-top: 5px;
+        }
+
+        .social-logo {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+            transition: transform 0.2s, box-shadow 0.2s;
+            background-color: white; /* pour que les logos ressortent sur le fond sombre */
+            padding: 4px;
+        }
+
+        .social-logo:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+        }
+
+        /* --- Styles Méthodes de Paiement --- */
+        .payment-methods {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .payment-logo {
+            height: 32px;
+            object-fit: contain;
+            filter: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            background-color: white;
+            border-radius: 6px;
+            padding: 4px;
+        }
+
+        .payment-logo:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 6px rgba(255,255,255,0.3);
         }
 
         .footer-bottom {
+            background-color: #222;
             text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid #333;
-            color: #888;
+            padding: 20px 30px;
+            margin-top: 30px;
+            border-top: 1px solid #444;
         }
+
+        .footer-bottom p {
+            margin: 0;
+        }
+        /* --- Responsive --- */
+        @media (max-width: 1024px) {
+    .product-grid {
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .product-card {
+        width: calc(33.33% - 20px);
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-nav {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .search-bar {
+        width: 100%;
+        margin: 15px 0;
+    }
+    
+    .account-cart {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .hero {
+        min-height: 300px;
+        max-height: none;
+    }
+    
+    .hero-content {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .hero-image, .hero-text {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+
+    .hero-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .advantages-content {
+        gap: 15px;
+    }
+    
+    .advantage {
+        width: calc(50% - 15px);
+        min-width: 150px;
+    }
+
+    .bottom-nav {
+        top: 120px; /* Ajuster selon la hauteur de la top-nav en mobile */
+    }
+
+    body {
+        padding-top: 170px; /* Ajuster selon la hauteur combinée en mobile */
+    }
+
+    .menu-dropdown {
+        background-color: #222;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .footer-column {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .payment-methods,
+    .footer-column ul:has(.social-logo) {
+        justify-content: center;
+    }
+}
+
 
         /* Stats Section */
         .stats-section {
@@ -426,7 +797,7 @@
         .stat-number {
             font-size: 36px;
             font-weight: bold;
-            color: #ff6b35;
+            color:#2268ff;
             margin-bottom: 8px;
         }
 
@@ -471,57 +842,6 @@
             }
         }
         /* Barre de recherche */
-
-        .search-bar {
-                flex: 1;                     /* occupe l'espace libre entre logo et menu */
-                max-width: 400px;            /* largeur max pour ne pas prendre tout */
-                margin: 0 40px;              /* espace avec logo et menu */
-                display: flex;
-                align-items: center;
-                background: white;
-                border-radius: 25px;
-                padding: 5px 10px;
-        }
-
-        .search-bar input {
-                flex: 1;                     /* occupe tout l’espace restant */
-                border: none;
-                outline: none;
-                padding: 8px 12px;
-                font-size: 14px;
-                border-radius: 25px;
-        }
-
-        .search-bar button {
-                background: #ff6b35;
-                border: none;
-                padding: 8px 12px;
-                border-radius: 50%;
-                cursor: pointer;
-                color: white;
-                font-size: 16px;
-                margin-left: 5px;
-                transition: 0.3s;
-        }
-
-        .search-bar button:hover {
-                background: #ff6b35;
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         /* =================================================== */
@@ -577,7 +897,7 @@
         }
 
         .detail-action-bar input[type="number"]:focus {
-            border-color: #ff6b35;
+            border-color: #2268ff;
             outline: none;
         }
 
@@ -683,7 +1003,7 @@
         .related-product-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-            border-color: #ff6b35;
+            border-color: #2268ff;
         }
 
         /* Image adaptée pour le carrousel */
@@ -727,5 +1047,5 @@
         .related-product-price {
             font-size: 20px;
             font-weight: bold;
-            color: #ff6b35;
+            color: #2268ff;
         }

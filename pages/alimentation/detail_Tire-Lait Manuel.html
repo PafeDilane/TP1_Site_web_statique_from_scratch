@@ -5,31 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Détail Produit - Biberon Anti-Colique 150ml</title> 
     <link rel="stylesheet" href="../../assets/css/nutrition.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
     <body>
-        <header>
-            <div class="header-container">
-                <div class="logo">🍼 Layette Store</div>
-                <nav>
-                    <ul>
-                        <form class="search-bar">
-                            <input type="text" placeholder="Rechercher un article...">
-                            <button type="submit">🔍</button>
-                        </form>
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="produits.html">Produits</a></li>
-                        <li><a href="alimentation.html" class="active">Nutrition</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="apropos.html">À Propos</a></li>
-                    </ul>
-                </nav>
+           <header>
+    <div class="top-nav">
+        <a href="index.html" class="logo">BÉBÉCONFORT</a>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Que recherchez-vous ?" aria-label="Rechercher">
+            <button aria-label="Lancer la recherche"><i class="fa fa-search"></i></button>
+        </div>
+
+        <div class="account-cart">
+            <a href="../../pages/connexion/connexion.html"><i class="fa fa-user"></i> Mon Compte</a>
+            <a href="../../pages/panier/panier.html"><i class="fa fa-shopping-cart"></i> Panier</a>
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <span class="menu-icon" aria-label="Menu" role="button" tabindex="0">
+            <i class="fa fa-bars"></i>
+        </span>
+        <div class="menu-dropdown">
+            <a href="../../index.html">Accueil</a>
+            <div class="category-dropdown">
+                <a href="#" class="dropdown-trigger">Catégories <i class="fa fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="../../pages/vêtements/pageCategorieVetement.html">Vêtements</a>
+                    <a href="../../pages/alimentation/alimentation.html">Alimentation</a>
+                    <a href="../../pages/accessoires/accessoires.html">Accessoires</a>
+                    <a href="../../pages/chaussures/chaussures.html">Chaussures</a>
+                    <a href="../../pages/textile_de_maternité/textile.html">Textile de Maternité</a>
+                    <a href="../../pages/poussettes/pouset.html">Poussettes</a>
+                    <a href="../../pages/amenagement_de_chambre/amenagement.html"> Aménagement de La chambre</a>
+                </div>
             </div>
-        </header>
+            <a href="#">À propos</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+</header>
 
         <div class="container">
             
             <p style="margin: 20px 0;">
-                <a href="../../pages/alimentation/alimentation.html" style="color: #ff6b35; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; font-size: 16px;">
+                <a href="../../pages/alimentation/alimentation.html" style="color: #2268ff; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; font-size: 16px;">
                     <span style="font-size: 20px;">←</span> Retour à la liste Nutrition
                 </a>
             </p>
@@ -47,7 +68,7 @@
                     <div class="product-category" style="font-size: 16px;">Tire-Lait</div>
                     <h1 class="product-name" style="font-size: 36px; margin-top: 5px; margin-bottom: 10px;">Tire-Lait Manuel</h1>
                     
-                    <div class="product-price" style="font-size: 44px; color: #ff6b35;">27 500 FCFA</div>
+                    <div class="product-price" style="font-size: 44px; color: #2268ff;">27 500 FCFA</div>
                     <div class="price-range" style="font-size: 16px; margin-bottom: 25px; border-bottom: 2px solid #f0f0f0; padding-bottom: 20px;">Prix estimé : 20 000 - 35 000 FCFA</div>
 
                     <div class="detail-features-full">
@@ -123,49 +144,67 @@
         </div>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>À Propos</h3>
-                <ul>
-                    <li><a href="#">Notre Histoire</a></li>
-                    <li><a href="#">Nos Valeurs</a></li>
-                    <li><a href="#">L'Équipe</a></li>
-                    <li><a href="#">Carrières</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Service Client</h3>
-                <ul>
-                    <li><a href="#">Aide & FAQ</a></li>
-                    <li><a href="#">Livraison</a></li>
-                    <li><a href="#">Retours</a></li>
-                    <li><a href="#">Garantie</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Catégories</h3>
-                <ul>
-                    <li><a href="#">Nutrition</a></li>
-                    <li><a href="#">Vêtements</a></li>
-                    <li><a href="#">Hygiène</a></li>
-                    <li><a href="#">Jouets</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Contact</h3>
-                <ul>
-                    <li>📧 contact@layettestore.cm</li>
-                    <li>📱 +237 654 794 187</li>
-                    <li>📍 Yaounde, Cameroun</li>
-                    <li>🕒 Lun-Sam: 8h-18h</li>
-                </ul>
+    <footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-column">
+            <h4>Service Client</h4>
+            <ul>
+                <li><a href="#">Centre D'aide</a></li>
+                <li><a href="#">Votre compte</a></li>
+                <li><a href="#">Vos Commandes</a></li>
+                <li><a href="#">Comment Payer</a></li>
+                    <li><a href="#">Comment Acheter</a></li>
+                <li><a href="#">Contactez Nous</a></li>
+                <li><a href="#">Mentions Légales</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Liens Utiles</h4>
+            <ul>
+                <li><a href="#">Vêtements</a></li>
+                <li><a href="#">Alimentation</a></li>
+                <li><a href="#">Couches et Lingettes</a></li>
+                <li><a href="#">Chaussures</a></li>
+                <li><a href="#">Textile de Maternité</a></li>
+                <li><a href="#">Poussettes</a></li>
+                <li><a href="#">Menagement de</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>A propos</h4>
+            <ul>
+                <li><a href="#">Qui Sommes Nous</a></li>
+                
+                <li><a href="#">Carrière</a></li>
+                <li><a href="#">Conditions Générales</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-column">
+            <h4>Methode De paiement</h4>
+            <div class="payment-methods">
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" alt="Visa" class="payment-logo"></a>
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" class="payment-logo"></a>
+                <a href="#"><img src="../../assets/images/images_index/téléchargement.png" alt="American Express" class="payment-logo"></a>
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" class="payment-logo"></a>
+                <a href="#"><img src="../../assets/images/images_index/mtn-mobile-money-logo.jpg" alt="Mtn Money" class="payment-logo"></a>
+                <a href="#"><img src="../../assets/images/images_index/orange-money-logo-png_seeklogo-440383.png" alt="orange money" class="payment-logo"></a>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Layette Store - Tous droits réservés | Projet TP Génie Informatique</p>
+
+        <div class="footer-column">
+            <h4>Réseaux Sociaux</h4>
+            <ul>
+                <li><a href="#"><img src="../../assets/images/images_index/facebook.jpg" alt="Facebook" class="social-logo"></a></li>
+                <li><a href="#"><img src="../../assets/images/images_index/instagram.jpg" alt="Instagram" class="social-logo"></a></li>
+                <li><a href="#"><img src="../../assets/images/images_index/twitter.png" alt="Twitter" class="social-logo"></a></li>
+            </ul>
         </div>
-    </footer>
+    </div>
+    <div class="footer-bottom">
+        <h5>&copy; <strong>BébéConfort 2025 - Tous droits réservés</strong></h5>
+    </div>
+</footer>
 
 
     </body>

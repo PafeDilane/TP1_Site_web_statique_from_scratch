@@ -1,0 +1,476 @@
+/* Style global */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+main {
+  margin-top: 150px; /* Ajuste cette valeur selon la hauteur réelle de ton header */
+}
+
+
+
+
+
+
+/* --- Top Navbar --- */
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            color: #2268ff;
+            font-weight: bold;
+            font-size: 25px;
+            text-decoration: none;
+        }
+
+        .search-bar {
+        flex: 1;
+        display: flex;
+        margin: 0 30px;
+        max-width: 400px;
+        }
+
+        .search-bar input {
+        flex: 1;
+        padding: 10px 15px;
+        border: 2px solid #2268ff;
+        border-right: none;
+        border-radius: 30px 0 0 30px;
+        font-size: 14px;
+        outline: none;
+        background-color: #fafafa;
+        }
+
+        .search-bar button {
+        padding: 0 15px;
+        background-color: #2268ff;
+        border: 2px solid #2268ff;
+        border-radius: 0 30px 30px 0;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s, transform 0.2s;
+        }
+
+
+
+
+
+        /* --- Account & Cart --- */
+        .account-cart {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        .account-cart a {
+            color: black;
+            text-decoration: none;
+            font-size: 17px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .account-cart a:hover {
+            color: #2268ff;
+        }
+
+        /* --- Bottom Nav --- */
+        .bottom-nav {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            background-color: #222;
+            color: #fff;
+            padding: 25px 30px;
+            font-size: 14px;
+            position: fixed;
+            top: 60px; /* Hauteur de la top-nav */
+            left: 0;
+            right: 0;
+            background-color: #222;
+            z-index: 999;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .bottom-nav .menu-dropdown {
+            display: flex;
+            gap: 30px;
+            margin-left: auto;
+        }
+
+        .bottom-nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .bottom-nav a:hover {
+            color: #2268ff;
+        }
+
+        .menu-icon {
+            font-size: 20px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+
+
+/* Style du menu déroulant */
+.category-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-trigger {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #222;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1000;
+    border-radius: 0 0 4px 4px;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 15px 18px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #2268ff;
+    color: white;
+    padding-left: 20px;
+}
+
+/* Afficher le menu au survol */
+.category-dropdown:hover .dropdown-content {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Animation pour l'apparition */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ajuster l'icône de la flèche */
+.dropdown-trigger i {
+    transition: transform 0.3s ease;
+}
+
+.category-dropdown:hover .dropdown-trigger i {
+    transform: rotate(180deg);
+}
+
+
+
+@media (max-width: 768px) {
+    .top-nav {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .search-bar {
+        width: 100%;
+        margin: 15px 0;
+    }
+    
+    .account-cart {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .hero {
+        min-height: 300px;
+        max-height: none;
+    }
+    
+    .hero-content {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .hero-image, .hero-text {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+
+    .hero-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .advantages-content {
+        gap: 15px;
+    }
+    
+    .advantage {
+        width: calc(50% - 15px);
+        min-width: 150px;
+    }
+
+    .bottom-nav {
+        top: 120px; /* Ajuster selon la hauteur de la top-nav en mobile */
+    }
+
+    body {
+        padding-top: 170px; /* Ajuster selon la hauteur combinée en mobile */
+    }
+
+    .menu-dropdown {
+        background-color: #222;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Section de connexion */
+.login-section {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #2268ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-form button:hover {
+    background-color: #2268ff;
+}
+
+
+
+        /* --- FOOTER STYLES --- */
+        .site-footer {
+            background-color: #000000;
+            color: #ccc;
+            padding: 40px 0 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-column h4 {
+            color: #2268ff;
+            font-size: 16px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .footer-column ul li a:hover {
+            color: #2268ff;
+        }
+        /* --- Styles Réseaux Sociaux --- */
+        /* La colonne réseaux sociaux est maintenant traitée par .footer-column */
+        .footer-column ul:has(.social-logo) { /* Cibler spécifiquement la liste de logos de RS */
+            display: flex;
+            gap: 10px;
+            margin-top: 5px;
+        }
+
+        .social-logo {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+            transition: transform 0.2s, box-shadow 0.2s;
+            background-color: white; /* pour que les logos ressortent sur le fond sombre */
+            padding: 4px;
+        }
+
+        .social-logo:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+        }
+
+        /* --- Styles Méthodes de Paiement --- */
+        .payment-methods {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .payment-logo {
+            height: 32px;
+            object-fit: contain;
+            filter: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            background-color: white;
+            border-radius: 6px;
+            padding: 4px;
+        }
+
+        .payment-logo:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 6px rgba(255,255,255,0.3);
+        }
+
+        .footer-bottom {
+            background-color: #222;
+            text-align: center;
+            padding: 20px 30px;
+            margin-top: 30px;
+            border-top: 1px solid #444;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+        }
+
+
+
+.form-links {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.form-links a {
+    color: #1a237e;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.form-links a:hover {
+    text-decoration: underline;
+}
+.forgot-password {
+    display: block;
+    margin-top: -15px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #1a237e;
+    text-decoration: none;
+    text-align: left;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
