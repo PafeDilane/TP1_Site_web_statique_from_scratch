@@ -339,29 +339,23 @@ textarea:focus {
     background-color: #fff9f0;
 }
 
-.payment-logo {
-    width: 50px;
-    height: 50px;
+.payment-image {
+    width: 60px;
+    height: 60px;
     margin: 0 auto 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
-    font-size: 18px;
-    color: white;
-    font-weight: bold;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+    padding: 5px;
 }
 
-.payment-logo.orange-money {
-    background: linear-gradient(135deg, #ff6600, #ff9900);
-}
-
-.payment-logo.mtn-momo {
-    background: linear-gradient(135deg, #ffcc00, #ff9900);
-}
-
-.payment-logo.paypal {
-    background: linear-gradient(135deg, #003087, #009cde);
+.payment-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .payment-option h4 {
@@ -485,7 +479,7 @@ textarea:focus {
     justify-content: flex-start;
 }
 
-.payment-logo {
+.footer-payment-logo {
     height: 25px;
     object-fit: contain;
     filter: none;
@@ -495,7 +489,7 @@ textarea:focus {
     padding: 2px;
 }
 
-.payment-logo:hover {
+.footer-payment-logo:hover {
     transform: scale(1.08);
     box-shadow: 0 0 6px rgba(255,255,255,0.3);
 }
