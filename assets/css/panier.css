@@ -320,7 +320,7 @@ main{
         }
         
         th {
-            background-color: #ff6b35;
+            background-color: #2268ff;
             color: white;
             font-weight: 600;
         }
@@ -516,11 +516,11 @@ main{
             padding: 18px;
             margin-top: 30px;
             font-size: 18px;
-            background: linear-gradient(to right, #ff6b35, #ff6b35);
+            background: linear-gradient(to right, #2268ff, #2268ff);
         }
         
         .checkout-btn:hover {
-            background: linear-gradient(to right, #ff6b35, #ff6b35);
+            background: linear-gradient(to right, #2268ff, #2268ff);
         }
         
         .note {
