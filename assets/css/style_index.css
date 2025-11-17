@@ -7,15 +7,15 @@
 
 
 
-        body {
-            background-color: #f5f5f5;
-            padding-top: 110px; 
-            
-            /* Les 3 lignes magiques pour un footer au fond */
-            min-height: 100vh; /* S'assurer que le body prend au moins la hauteur du viewport */
-            display: flex;
-            flex-direction: column; /* Positionne les enfants (header, content, footer) verticalement */
-        }
+body {
+    padding-top: 110px;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 0 !important;
+    }
+}
 
 /* 
 
