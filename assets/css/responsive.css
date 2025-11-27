@@ -1,0 +1,736 @@
+/* ===========================
+   RESPONSIVE DESIGN GLOBAL
+   À ajouter en dernier dans tous les fichiers CSS
+   =========================== */
+
+/* Reset et Base Responsive */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ===========================
+   HEADER RESPONSIVE
+   =========================== */
+
+/* Mobile First - Petit écran (320px - 480px) */
+@media (max-width: 480px) {
+    /* Top Navigation */
+    .top-nav {
+        flex-direction: column;
+        padding: 10px !important;
+        gap: 10px;
+    }
+    
+    .logo {
+        font-size: 20px !important;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .search-bar {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        order: 3;
+    }
+    
+    .search-bar input {
+        font-size: 14px;
+        padding: 8px 12px !important;
+    }
+    
+    .search-bar button {
+        padding: 0 12px !important;
+    }
+    
+    .account-cart {
+        width: 100%;
+        justify-content: center;
+        gap: 15px !important;
+        font-size: 13px !important;
+    }
+    
+    .account-cart a {
+        font-size: 13px !important;
+    }
+    
+    /* Bottom Navigation */
+    .bottom-nav {
+        flex-direction: column;
+        padding: 15px 10px !important;
+        gap: 15px;
+        top: auto !important;
+        position: relative !important;
+    }
+    
+    .menu-dropdown {
+        flex-direction: column !important;
+        width: 100%;
+        gap: 10px !important;
+        margin-left: 0 !important;
+    }
+    
+    .menu-dropdown a {
+        padding: 10px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .category-dropdown {
+        width: 100%;
+    }
+    
+    .dropdown-content {
+        position: static !important;
+        width: 100%;
+        display: none;
+        background-color: #333 !important;
+    }
+    
+    .category-dropdown:hover .dropdown-content,
+    .category-dropdown:active .dropdown-content {
+        display: block !important;
+    }
+    
+    /* Main Content Adjustment */
+    main {
+        margin-top: 0 !important;
+        padding-top: 20px !important;
+    }
+    
+    body {
+        padding-top: 0 !important;
+    }
+}
+
+/* Tablettes et petits écrans (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .top-nav {
+        flex-wrap: wrap;
+        padding: 15px !important;
+        gap: 10px;
+    }
+    
+    .logo {
+        font-size: 22px !important;
+    }
+    
+    .search-bar {
+        flex: 1 1 100%;
+        max-width: 100% !important;
+        margin: 10px 0 !important;
+        order: 3;
+    }
+    
+    .account-cart {
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .bottom-nav {
+        flex-wrap: wrap;
+        padding: 15px !important;
+        justify-content: center;
+    }
+    
+    .menu-dropdown {
+        gap: 15px !important;
+    }
+    
+    main {
+        margin-top: 20px !important;
+    }
+}
+
+/* ===========================
+   HERO SECTION RESPONSIVE
+   =========================== */
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 400px !important;
+    }
+    
+    .hero-container {
+        flex-direction: column !important;
+        padding: 20px 10px !important;
+        min-height: auto !important;
+    }
+    
+    .hero-left,
+    .hero-right {
+        flex: 1 1 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+    
+    .hero-image img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+    
+    .hero-text h2 {
+        font-size: 1.8rem !important;
+        line-height: 1.2;
+    }
+    
+    .hero-text h3 {
+        font-size: 1.2rem !important;
+    }
+    
+    .hero-buttons {
+        flex-direction: column !important;
+        gap: 10px !important;
+    }
+    
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-secondary {
+        width: 100% !important;
+        max-width: 300px;
+    }
+    
+    .slider-dots {
+        bottom: 10px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h2 {
+        font-size: 1.5rem !important;
+    }
+    
+    .hero-text h3 {
+        font-size: 1rem !important;
+    }
+    
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-secondary {
+        padding: 10px 20px !important;
+        font-size: 14px !important;
+    }
+}
+
+/* ===========================
+   GRILLE DE PRODUITS RESPONSIVE
+   =========================== */
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+        padding: 20px 10px !important;
+    }
+    
+    .product-card {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px !important;
+        padding: 30px 15px !important;
+    }
+    
+    .product-card {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px !important;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 20px !important;
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* ===========================
+   BANNER RESPONSIVE
+   =========================== */
+
+@media (max-width: 768px) {
+    .banner {
+        padding: 30px 20px !important;
+    }
+    
+    .banner h1 {
+        font-size: 28px !important;
+        letter-spacing: 1px !important;
+    }
+    
+    .banner p {
+        font-size: 16px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        padding: 20px 15px !important;
+    }
+    
+    .banner h1 {
+        font-size: 22px !important;
+        letter-spacing: 0.5px !important;
+    }
+    
+    .banner p {
+        font-size: 14px !important;
+    }
+}
+
+/* ===========================
+   FILTRES RESPONSIVE
+   =========================== */
+
+@media (max-width: 768px) {
+    .filter-section {
+        padding: 20px 15px !important;
+    }
+    
+    .filter-options {
+        flex-direction: column !important;
+        gap: 15px !important;
+    }
+    
+    .filter-group {
+        width: 100%;
+    }
+    
+    .filter-group select,
+    .filter-group input {
+        width: 100% !important;
+        min-width: 100% !important;
+    }
+}
+
+/* ===========================
+   STATS SECTION RESPONSIVE
+   =========================== */
+
+@media (max-width: 768px) {
+    .stats-section {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px !important;
+    }
+    
+    .stat-card {
+        padding: 20px 15px !important;
+    }
+    
+    .stat-number {
+        font-size: 28px !important;
+    }
+    
+    .stat-label {
+        font-size: 13px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-section {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* ===========================
+   FOOTER RESPONSIVE
+   =========================== */
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        padding: 0 20px !important;
+    }
+    
+    .footer-column {
+        width: 100% !important;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .footer-column h4 {
+        margin-bottom: 15px !important;
+    }
+    
+    .payment-methods {
+        justify-content: center !important;
+    }
+    
+    .footer-column ul:has(.social-logo) {
+        justify-content: center !important;
+    }
+    
+    .footer-bottom {
+        padding: 15px 20px !important;
+    }
+}
+
+/* ===========================
+   PAGE DÉTAIL PRODUIT RESPONSIVE
+   =========================== */
+
+@media (max-width: 768px) {
+    .produit-header {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+        padding: 20px 15px !important;
+    }
+    
+    .product-detail-layout {
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+    
+    .detail-image-area,
+    .detail-info-area {
+        max-width: 100% !important;
+        flex: 1 1 100% !important;
+    }
+    
+    .detail-image-area .product-image {
+        height: 300px !important;
+    }
+    
+    .info-principale h1,
+    .product-name {
+        font-size: 1.5rem !important;
+    }
+    
+    .prix,
+    .product-price {
+        font-size: 2rem !important;
+    }
+    
+    .caracteristiques {
+        padding: 12px !important;
+    }
+    
+    .detail-action-bar {
+        flex-wrap: wrap !important;
+        gap: 10px !important;
+    }
+    
+    .detail-action-bar input[type="number"] {
+        width: 100% !important;
+        margin-bottom: 10px;
+    }
+    
+    .btn-add-cart,
+    .btn-buy-now,
+    .btn-achat {
+        width: 100% !important;
+        padding: 12px 20px !important;
+        font-size: 14px !important;
+    }
+}
+
+/* ===========================
+   PRODUITS SUGGÉRÉS RESPONSIVE
+   =========================== */
+
+@media (max-width: 768px) {
+    .related-products-container {
+        gap: 10px !important;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+    }
+    
+    .related-product-card {
+        flex: 0 0 160px !important;
+        scroll-snap-align: start;
+    }
+    
+    .related-product-image {
+        height: 140px !important;
+    }
+}
+
+/* ===========================
+   NAVIGATION BUSINESS FLOOR RESPONSIVE
+   =========================== */
+
+@media (max-width: 768px) {
+    .nav-wrapper .nav-container {
+        width: 100% !important;
+        padding: 30px 15px !important;
+        gap: 15px !important;
+    }
+    
+    .nav-cube {
+        width: 100% !important;
+        min-height: auto !important;
+        padding: 20px 15px !important;
+    }
+    
+    .nav-cube .title-container,
+    .nav-cube .content-container {
+        width: 100% !important;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .nav-wrapper .nav-container {
+        grid-template-columns: repeat(2, 1fr);
+        display: grid;
+    }
+    
+    .nav-cube {
+        width: 100% !important;
+    }
+}
+
+/* ===========================
+   CARROUSEL RANKING RESPONSIVE
+   =========================== */
+
+@media (max-width: 768px) {
+    .ranking-card-box,
+    .new-arrival-box,
+    .saving-spotlight-box {
+        width: 100%;
+    }
+    
+    .ranking-card-slider-box {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .rx-image-item {
+        min-width: 280px;
+    }
+}
+
+/* ===========================
+   CONTAINER RESPONSIVE
+   =========================== */
+
+@media (max-width: 1440px) {
+    .container {
+        max-width: 100% !important;
+        padding: 0 20px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px 40px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px 30px !important;
+    }
+}
+
+/* ===========================
+   PANIER PAGE RESPONSIVE
+   =========================== */
+
+@media (max-width: 768px) {
+    .cart-totals {
+        padding: 20px 15px !important;
+    }
+    
+    .payment-options {
+        flex-direction: column !important;
+        gap: 15px !important;
+    }
+    
+    .payment-option {
+        width: 100% !important;
+        min-width: 100% !important;
+    }
+    
+    table {
+        font-size: 14px;
+    }
+    
+    th, td {
+        padding: 10px 8px !important;
+    }
+}
+
+/* ===========================
+   ADVANTAGES SECTION RESPONSIVE
+   =========================== */
+
+@media (max-width: 768px) {
+    .advantages-content {
+        flex-direction: column !important;
+        gap: 15px !important;
+    }
+    
+    .advantage {
+        width: 100% !important;
+        min-width: 100% !important;
+    }
+}
+
+/* ===========================
+   AMÉLIORATION TACTILE MOBILE
+   =========================== */
+
+@media (max-width: 768px) {
+    /* Boutons plus grands pour mobile */
+    button,
+    .btn-primary,
+    .btn-secondary,
+    .add-to-cart,
+    .btn-add-cart,
+    .btn-buy-now,
+    .checkout-btn {
+        min-height: 44px !important;
+        touch-action: manipulation;
+    }
+    
+    /* Liens plus espacés */
+    a {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+    }
+    
+    /* Inputs plus grands */
+    input,
+    select,
+    textarea {
+        min-height: 44px !important;
+        font-size: 16px !important; /* Évite le zoom automatique sur iOS */
+    }
+}
+
+/* ===========================
+   OPTIMISATION PERFORMANCE
+   =========================== */
+
+@media (max-width: 768px) {
+    /* Désactiver animations coûteuses sur mobile */
+    * {
+        animation-duration: 0.2s !important;
+        transition-duration: 0.2s !important;
+    }
+    
+    /* Images optimisées */
+    img {
+        image-rendering: -webkit-optimize-contrast;
+    }
+}
+
+/* ===========================
+   CORRECTION OVERFLOW
+   =========================== */
+
+body, html {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+}
+
+* {
+    max-width: 100%;
+}
+
+/* ===========================
+   LANDSCAPE MODE MOBILE
+   =========================== */
+
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        min-height: 300px !important;
+    }
+    
+    .hero-text h2 {
+        font-size: 1.5rem !important;
+    }
+    
+    main {
+        padding-top: 10px !important;
+    }
+}
+
+/* ===========================
+   TRÈS GRANDS ÉCRANS (1440px+)
+   =========================== */
+
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+    
+    .product-grid {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+}
+
+/* ===========================
+   PRINT MEDIA
+   =========================== */
+
+@media print {
+    .top-nav,
+    .bottom-nav,
+    .footer-content,
+    .btn-add-cart,
+    .btn-buy-now,
+    .add-to-cart {
+        display: none !important;
+    }
+    
+    body {
+        padding-top: 0 !important;
+    }
+}
+
+/* ===========================
+   ACCESSIBILITÉ MOBILE
+   =========================== */
+
+@media (max-width: 768px) {
+    /* Focus visible sur mobile */
+    *:focus {
+        outline: 2px solid #2268ff !important;
+        outline-offset: 2px;
+    }
+    
+    /* Contraste amélioré */
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
