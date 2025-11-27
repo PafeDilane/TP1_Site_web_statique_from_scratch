@@ -2,9 +2,36 @@
 Création d'un site web statique vitrine de E-commerce avec du CSS et HTML.
 
 
+MEMBRES DU GROUPE: 
+
+NOM(s) ET PRENOM(s)               ADDRESSE EMAIL                           MATRICULE            NOM DE LA BRANCHE
+
+Francois-charles ATANGA          (afrancoischarles@gmail.com)              22P509               -franoischarles
+
+Charles-Henry ATANGA             (charleshenryatanga14@gmail.com)          22P283                
 
 
-BebeConfort – Site E-Commerce pour Bébé
+MANFOUO KOUAMASSONG BRAUN        (mkbraun256@gmail.com)                    22P306               - braun
+
+PASSO NGUENA DENNY BRAYAN        (pdennybrayan@gmail.com)                  22P344               - passo
+
+⁠Danwe Kagou Manuella             (danwemanuella@gmail.com)                 22P236               - ManuellaDanwe
+
+MOFFO Pichelle                   (moffopichelestevenie@gmail.com)          22P525               - moffo
+
+MEBENGA OWONA MICHEL STEPHANE    (stephowona05@gmail.com)                  24P767               - branche_stephane
+
+Kouam kamdem Ulrich              (Kouamulrich19@gmail.com)                 22P371               - connexion
+
+FONING KOTSAP jaures Herve       (foningjaures20@gmail.com)                22P526               - Foning
+
+KENMEUGNE MICHELE                (michelekenmeugne@gmail.com)              22P216               - KENMEUGNE
+
+PAFE MEKONTSO DILANE             (pafedilane@gmail.com)                    22P486               - Pafe
+
+
+
+BebeConfort :  Site E-Commerce d'articles et accessoires pour Bébé
 
 1) Présentation du projet
 
