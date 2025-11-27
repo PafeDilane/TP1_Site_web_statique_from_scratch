@@ -127,12 +127,7 @@
         
         
     </div>
-<!-- 
-    <div class="slider-dots">
-        <span class="dot active" data-slide="0"></span>
-        <span class="dot" data-slide="1"></span>
-        <span class="dot" data-slide="2"></span>
-    </div> -->
+
 </section>
 
 
@@ -917,115 +912,7 @@
         <h5>&copy; <strong>BébéConfort 2025 - Tous droits réservés</strong></h5>
     </div>
 </footer>
-<!-- 
-<script>
-    // Simple countdown timer script
-    function startCountdown() {
-        const hoursElement = document.getElementById('hours');
-        const minutesElement = document.getElementById('minutes');
-        const secondsElement = document.getElementById('seconds');
 
-        if(!hoursElement || !minutesElement || !secondsElement) return;
-
-        let totalSeconds = (6 * 3600) + (21 * 60) + 56; // Initial time
-
-        const interval = setInterval(() => {
-            if (totalSeconds <= 0) {
-                clearInterval(interval);
-                document.querySelector('.countdown').innerHTML = "Vente terminée !";
-                return;
-            }
-
-            totalSeconds--;
-
-            let hours = Math.floor(totalSeconds / 3600);
-            let minutes = Math.floor((totalSeconds % 3600) / 60);
-            let seconds = totalSeconds % 60;
-
-            hoursElement.textContent = String(hours).padStart(2, '0');
-            minutesElement.textContent = String(minutes).padStart(2, '0');
-            secondsElement.textContent = String(seconds).padStart(2, '0');
-
-        }, 1000);
-    }
-
-    // Start the countdown when the page content is loaded
-    document.addEventListener('DOMContentLoaded', startCountdown);
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const menuIcon = document.querySelector('.menu-icon');
-        const bottomNav = document.querySelector('.bottom-nav');
-
-        menuIcon.addEventListener('click', () => {
-            bottomNav.classList.toggle('show-menu');
-        });
-
-        // Optionnel : hover également pour desktop
-        menuIcon.addEventListener('mouseenter', () => {
-            if(window.innerWidth > 768){
-                bottomNav.classList.add('show-menu');
-            }
-        });
-        menuIcon.addEventListener('mouseleave', () => {
-            if(window.innerWidth > 768){
-                bottomNav.classList.remove('show-menu');
-            }
-        });
-    });
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const slides = document.querySelectorAll('.hero-content');
-        const dots = document.querySelectorAll('.dot');
-        const prev = document.querySelector('.prev');
-        const next = document.querySelector('.next');
-        let currentSlide = 0;
-        
-        function showSlide(n) {
-            // Masquer tous les slides et désactiver tous les dots
-            slides.forEach(slide => slide.classList.remove('active'));
-            dots.forEach(dot => dot.classList.remove('active'));
-            
-            // Calculer l'index du nouveau slide
-            currentSlide = (n + slides.length) % slides.length;
-            
-            // Afficher le nouveau slide et activer le dot correspondant
-            slides[currentSlide].classList.add('active');
-            dots[currentSlide].classList.add('active');
-        }
-        
-        // Démarrer le carousel automatique
-        let slideInterval = setInterval(() => {
-            showSlide(currentSlide + 1);
-        }, 5000); // Change de slide toutes les 5 secondes
-        
-        // Navigation avec les flèches
-        if (prev && next) {
-            prev.addEventListener('click', () => {
-                clearInterval(slideInterval); // Arrêter la transition auto
-                showSlide(currentSlide - 1);
-                // Redémarrer la transition auto
-                slideInterval = setInterval(() => showSlide(currentSlide + 1), 5000);
-            });
-            
-            next.addEventListener('click', () => {
-                clearInterval(slideInterval); // Arrêter la transition auto
-                showSlide(currentSlide + 1);
-                // Redémarrer la transition auto
-                slideInterval = setInterval(() => showSlide(currentSlide + 1), 5000);
-            });
-        }
-        
-        // Navigation avec les dots
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                clearInterval(slideInterval); // Arrêter la transition auto
-                showSlide(index);
-                // Redémarrer la transition auto
-                slideInterval = setInterval(() => showSlide(currentSlide + 1), 5000);
-            });
-        });
-    });
-</script> -->
 
 </body>
 </html>
